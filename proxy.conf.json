@@ -1,0 +1,6 @@
+{
+    "/books": {
+        "target": "http://api.knigopis.com/",
+        "changeOrigin": true
+    }
+}
