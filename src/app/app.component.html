@@ -2,4 +2,11 @@
   {{title}}
 </h1>
 <p>Hello World!</p>
+
+<ul>
+  <li *ngFor="let book of latestNoteBooks">
+    {{book.title}} ~ <strong>{{book.user.nickname}}</strong>
+  </li>
+</ul>
+
 <router-outlet></router-outlet>
