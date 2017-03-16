@@ -2,6 +2,8 @@
 
 Angular 2 клиент для [api.knigopis.com](https://github.com/knigopis/api.knigopis.com).
 
+Есть такой сайт [www.knigopis.com](http://www.knigopis.com/) — дневник читателя и сервис учёта прочитанных книг. Его создатель - мой друг [Роман](http://github.com/rnixik). Клиентская часть сайта Книгописи написана на первом Ангуляре, а в данном проекте я пытаюсь написать клиентскую часть на Ангуляре 2 и параллельно изучаю его. Для работы с книгами использую прокси и [api.knigopis.com](https://github.com/knigopis/api.knigopis.com).
+
 ## Часть 1
 
 1) О сайте книгописи
