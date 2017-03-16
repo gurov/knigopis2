@@ -1,4 +1,7 @@
-# KnigopisAng2
+# Knigopis2
+
+Angular 2 клиент для [api.knigopis.com](https://github.com/knigopis/api.knigopis.com).
+
 ## Часть 1
 
 1) О сайте книгописи
