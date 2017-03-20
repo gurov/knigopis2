@@ -21,3 +21,14 @@ Angular 2 клиент для [api.knigopis.com](https://github.com/knigopis/api
 
 [![Книгопись и Angular 2, часть 2](http://img.youtube.com/vi/TSANCWd1kNk/0.jpg)](http://www.youtube.com/watch?v=TSANCWd1kNk "Книгопись и Angular 2, часть 2")
 
+
+## Часть 3
+
+1) Обработка ошибок для bookService
+2) Расширяем настройки прокси
+4) Добавляем UserService
+3) Выносим обработку запросов к http сервису в отдельный файл
+
+https://youtu.be/HbL1dmYIhdQ
+
+[![Книгопись и Angular 2, часть 2](http://img.youtube.com/vi/HbL1dmYIhdQ/0.jpg)](http://www.youtube.com/watch?v=HbL1dmYIhdQ "Книгопись и Angular 2, часть 3")
