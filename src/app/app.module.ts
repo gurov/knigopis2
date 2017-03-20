@@ -1,4 +1,6 @@
+import { UserService } from './services/user.service';
 import { BookService } from './services/book.service';
+import { ApiService } from "./services/api.service";
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -17,7 +19,7 @@ import { AppComponent } from './app.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [BookService],
+  providers: [BookService, UserService, ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
