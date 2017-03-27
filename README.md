@@ -29,6 +29,12 @@ Angular 2 клиент для [api.knigopis.com](https://github.com/knigopis/api
 4) Добавляем UserService
 3) Выносим обработку запросов к http сервису в отдельный файл
 
-https://youtu.be/HbL1dmYIhdQ
+[![Книгопись и Angular 2, часть 3](http://img.youtube.com/vi/HbL1dmYIhdQ/0.jpg)](http://www.youtube.com/watch?v=HbL1dmYIhdQ "Книгопись и Angular 2, часть 3")
 
-[![Книгопись и Angular 2, часть 2](http://img.youtube.com/vi/HbL1dmYIhdQ/0.jpg)](http://www.youtube.com/watch?v=HbL1dmYIhdQ "Книгопись и Angular 2, часть 3")
+## Часть 4
+
+1) Подключаем Bootstrap 4
+2) Создаем HomeComponent
+3) Добавляем главное меню
+
+[![Книгопись и Angular 2, часть 4](http://img.youtube.com/vi/s42urb3xkzY/0.jpg)](http://www.youtube.com/watch?v=s42urb3xkzY "Книгопись и Angular 2, часть 4")

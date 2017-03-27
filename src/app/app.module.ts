@@ -1,3 +1,4 @@
+import { HomeComponent } from './components/home.component';
 import { UserService } from './services/user.service';
 import { BookService } from './services/book.service';
 import { ApiService } from "./services/api.service";
@@ -11,7 +12,8 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

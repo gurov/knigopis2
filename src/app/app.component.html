@@ -1,16 +1,27 @@
-<h1>
-  {{title}}
-</h1>
-<p>Hello World!</p>
 
-<ul>
-  <li *ngFor="let user of latestUsers">{{user.nickname}}<sup>{{user.booksCount}}</sup></li>
-</ul>
+<nav class="navbar navbar-inverse bg-inverse navbar-toggleable-md">
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleContainer"
+      aria-controls="navbarsExampleContainer" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <a class="navbar-brand" href="/">Книгопись</a>
 
-<ul>
-  <li *ngFor="let book of latestNoteBooks">
-    {{book.title}} ~ <strong>{{book.user.nickname}}</strong>
-  </li>
-</ul>
+    <div class="collapse navbar-collapse" id="navbarsExampleContainer">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Test</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav pull-right">
+        <li class="nav-item">
+          <a class="nav-link" href="#">AUTH</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-<router-outlet></router-outlet>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
