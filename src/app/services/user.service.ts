@@ -13,4 +13,8 @@ export class UserService {
         return this.api.get(this.path + '/latest');
     }
 
+    getUserBooks(userId: string): Observable<Book[]> {
+        return this.api.get(`${this.path}/${userId}/books`);
+    }
+
 }

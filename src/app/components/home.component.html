@@ -2,7 +2,11 @@
 
 
 <ul>
-    <li *ngFor="let user of latestUsers">{{user.nickname}}<sup>{{user.booksCount}}</sup></li>
+    <li *ngFor="let user of latestUsers">
+        <a [routerLink]="[user.nickname, 'books']"
+            [queryParams]="{u: user.id}">{{user.nickname}}</a>
+        <sup>{{user.booksCount}}</sup>
+    </li>
 </ul>
 
 <ul>

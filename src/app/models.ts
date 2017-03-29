@@ -12,6 +12,12 @@ export class Book {
     notes?: string;
     createdAt?: string;
     user?: User;
+    lang?: any;
+    readDay?: string;
+    readMonth?: string;
+    readYear?: string;
+    updatedAt?: string;
+    userId?: string;
 }
 
 export interface List<T> {

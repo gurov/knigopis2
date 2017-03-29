@@ -1,3 +1,4 @@
+import { UserBookListComponent } from './components/user-book-list.component';
 import { HomeComponent } from './components/home.component';
 import { UserService } from './services/user.service';
 import { BookService } from './services/book.service';
@@ -13,7 +14,8 @@ import { AppComponent } from './app.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    UserBookListComponent
   ],
   imports: [
     BrowserModule,

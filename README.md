@@ -38,3 +38,12 @@ Angular 2 клиент для [api.knigopis.com](https://github.com/knigopis/api
 3) Добавляем главное меню
 
 [![Книгопись и Angular 2, часть 4](http://img.youtube.com/vi/s42urb3xkzY/0.jpg)](http://www.youtube.com/watch?v=s42urb3xkzY "Книгопись и Angular 2, часть 4")
+
+## Часть 5
+
+1) Создаем UserBookListComponent
+2) Добавляем getUserBooks функцию в UserService для получения списка книг
+3) Расширяем модель Book
+4) Прописываем роутинг на страницу пользователя
+
+[![Книгопись и Angular 2, часть 5](http://img.youtube.com/vi/DGSUFjsutnw/0.jpg)](http://www.youtube.com/watch?v=DGSUFjsutnw "Книгопись и Angular 2, часть 5")
