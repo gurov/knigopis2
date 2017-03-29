@@ -19,7 +19,7 @@ Angular 2 клиент для [api.knigopis.com](https://github.com/knigopis/api
 2) Костяк проекта на Angular 2
 3) Настройка прокси
 
-[![Книгопись и Angular 2, часть 1](http://img.youtube.com/vi/yC49u1Y5faE/0.jpg)](http://www.youtube.com/watch?v=yC49u1Y5faE "Книгопись и Angular 2, часть 1")
+[![Книгопись и Angular 2, часть 1](http://img.youtube.com/vi/yC49u1Y5faE/mqdefault.jpg)](http://www.youtube.com/watch?v=yC49u1Y5faE "Книгопись и Angular 2, часть 1")
 
 ## Часть 2
 
@@ -28,7 +28,7 @@ Angular 2 клиент для [api.knigopis.com](https://github.com/knigopis/api
 4) Модели Book, User, интерфейс List
 3) Вывод списка
 
-[![Книгопись и Angular 2, часть 2](http://img.youtube.com/vi/TSANCWd1kNk/0.jpg)](http://www.youtube.com/watch?v=TSANCWd1kNk "Книгопись и Angular 2, часть 2")
+[![Книгопись и Angular 2, часть 2](http://img.youtube.com/vi/TSANCWd1kNk/mqdefault.jpg)](http://www.youtube.com/watch?v=TSANCWd1kNk "Книгопись и Angular 2, часть 2")
 
 
 ## Часть 3
@@ -38,7 +38,7 @@ Angular 2 клиент для [api.knigopis.com](https://github.com/knigopis/api
 4) Добавляем UserService
 3) Выносим обработку запросов к http сервису в отдельный файл
 
-[![Книгопись и Angular 2, часть 3](http://img.youtube.com/vi/HbL1dmYIhdQ/0.jpg)](http://www.youtube.com/watch?v=HbL1dmYIhdQ "Книгопись и Angular 2, часть 3")
+[![Книгопись и Angular 2, часть 3](http://img.youtube.com/vi/HbL1dmYIhdQ/mqdefault.jpg)](http://www.youtube.com/watch?v=HbL1dmYIhdQ "Книгопись и Angular 2, часть 3")
 
 ## Часть 4
 
@@ -46,7 +46,7 @@ Angular 2 клиент для [api.knigopis.com](https://github.com/knigopis/api
 2) Создаем HomeComponent
 3) Добавляем главное меню
 
-[![Книгопись и Angular 2, часть 4](http://img.youtube.com/vi/s42urb3xkzY/0.jpg)](http://www.youtube.com/watch?v=s42urb3xkzY "Книгопись и Angular 2, часть 4")
+[![Книгопись и Angular 2, часть 4](http://img.youtube.com/vi/s42urb3xkzY/mqdefault.jpg)](http://www.youtube.com/watch?v=s42urb3xkzY "Книгопись и Angular 2, часть 4")
 
 ## Часть 5
 
@@ -55,4 +55,4 @@ Angular 2 клиент для [api.knigopis.com](https://github.com/knigopis/api
 3) Расширяем модель Book
 4) Прописываем роутинг на страницу пользователя
 
-[![Книгопись и Angular 2, часть 5](http://img.youtube.com/vi/DGSUFjsutnw/0.jpg)](http://www.youtube.com/watch?v=DGSUFjsutnw "Книгопись и Angular 2, часть 5")
+[![Книгопись и Angular 2, часть 5](http://img.youtube.com/vi/DGSUFjsutnw/mqdefault.jpg)](http://www.youtube.com/watch?v=DGSUFjsutnw "Книгопись и Angular 2, часть 5")
