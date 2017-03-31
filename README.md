@@ -56,3 +56,13 @@ Angular 2 клиент для [api.knigopis.com](https://github.com/knigopis/api
 4) Прописываем роутинг на страницу пользователя
 
 [![Книгопись и Angular 2, часть 5](http://img.youtube.com/vi/DGSUFjsutnw/mqdefault.jpg)](http://www.youtube.com/watch?v=DGSUFjsutnw "Книгопись и Angular 2, часть 5")
+
+## Часть 6
+
+1) Добавляем отписку от роута в UserBookListComponent
+2) Создаем BookComponent
+3) Добавляем getUserInfo в UserService
+4) Форматируем UserBookListComponent
+4) Форматируем HomeComponent
+
+[![Книгопись и Angular 2, часть 6](http://img.youtube.com/vi/Nt9FXoWvKpI/mqdefault.jpg)](http://www.youtube.com/watch?v=Nt9FXoWvKpI "Книгопись и Angular 2, часть 6")

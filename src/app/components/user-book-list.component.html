@@ -1,3 +1,10 @@
-<ul>
-    <li *ngFor="let book of userBooks">{{book.title}}</li>
-</ul>
+<h3 class="mt-3">
+    Список прочитанных книг пользователя
+    <a [routerLink]="['/',user?.nickname, 'books']"
+       [queryParams]="{u: user?.id}">{{user.nickname}}</a>
+</h3>
+<hr>
+<div>
+    <k-book *ngFor="let book of userBooks" [book]="book"></k-book>
+
+</div>

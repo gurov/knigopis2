@@ -17,4 +17,8 @@ export class UserService {
         return this.api.get(`${this.path}/${userId}/books`);
     }
 
+    getUserInfo(userId: string): Observable<User> {
+        return this.api.get(this.path + '/' + userId);
+    }
+
 }

@@ -1,3 +1,4 @@
+import { BookComponent } from './components/book.component';
 import { UserBookListComponent } from './components/user-book-list.component';
 import { HomeComponent } from './components/home.component';
 import { UserService } from './services/user.service';
@@ -15,7 +16,8 @@ import { AppComponent } from './app.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    UserBookListComponent
+    UserBookListComponent,
+    BookComponent
   ],
   imports: [
     BrowserModule,
