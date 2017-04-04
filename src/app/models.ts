@@ -13,9 +13,9 @@ export class Book {
     createdAt?: string;
     user?: User;
     lang?: any;
-    readDay?: string;
-    readMonth?: string;
-    readYear?: string;
+    readDay?: number;
+    readMonth?: number;
+    readYear?: number;
     updatedAt?: string;
     userId?: string;
 }

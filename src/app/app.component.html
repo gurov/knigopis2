@@ -1,27 +1,28 @@
-
-<nav class="navbar navbar-inverse bg-inverse navbar-toggleable-md">
+<div class="bg-inverse">
   <div class="container">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleContainer"
-      aria-controls="navbarsExampleContainer" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-    <a class="navbar-brand" [routerLink]="['/']">Книгопись</a>
+    <nav class="navbar navbar-inverse bg-inverse navbar-toggleable-md">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleContainer"
+        aria-controls="navbarsExampleContainer" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      <a class="navbar-brand" [routerLink]="['/']">Книгопись</a>
 
-    <div class="collapse navbar-collapse" id="navbarsExampleContainer">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Test</a>
-        </li>
-      </ul>
-      <ul class="navbar-nav pull-right">
-        <li class="nav-item">
-          <a class="nav-link" href="#">AUTH</a>
-        </li>
-      </ul>
-    </div>
+      <div class="collapse navbar-collapse" id="navbarsExampleContainer">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Test</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav pull-right">
+          <li class="nav-item">
+            <a class="nav-link" href="#">AUTH</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </div>
-</nav>
+</div>
 
-<div class="container">
+<div class="container pt-3">
   <router-outlet></router-outlet>
 </div>

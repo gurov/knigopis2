@@ -11,13 +11,15 @@ import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { YearSortPipe } from './pipes/year-sort.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     UserBookListComponent,
-    BookComponent
+    BookComponent,
+    YearSortPipe
   ],
   imports: [
     BrowserModule,

@@ -66,3 +66,11 @@ Angular 2 клиент для [api.knigopis.com](https://github.com/knigopis/api
 4) Форматируем HomeComponent
 
 [![Книгопись и Angular 2, часть 6](http://img.youtube.com/vi/Nt9FXoWvKpI/mqdefault.jpg)](http://www.youtube.com/watch?v=Nt9FXoWvKpI "Книгопись и Angular 2, часть 6")
+
+## Часть 7
+
+1) Добавляем оглавление (Bootstrap 4: list groups)
+2) Адаптируем под широкие экраны и мобильные телефоны (Bootstrap 4: `.push-md-*` and `.pull-md-*`)
+3) Добавляем сортировку по годам (Angular 2 Pipe: yearSort)
+
+[![Книгопись и Angular 2, часть 7](http://img.youtube.com/vi/iwFsj2p3VOg/mqdefault.jpg)](http://www.youtube.com/watch?v=iwFsj2p3VOg "Книгопись и Angular 2, часть 7")
