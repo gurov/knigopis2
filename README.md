@@ -74,3 +74,12 @@ Angular 2 клиент для [api.knigopis.com](https://github.com/knigopis/api
 3) Добавляем сортировку по годам (Angular 2 Pipe: yearSort)
 
 [![Книгопись и Angular 2, часть 7](http://img.youtube.com/vi/iwFsj2p3VOg/mqdefault.jpg)](http://www.youtube.com/watch?v=iwFsj2p3VOg "Книгопись и Angular 2, часть 7")
+
+## Часть 8
+
+1) Добавляем поиск по книгам (BookSearchPipe)
+2) Добавляем анимацию загрузки книг (CSS3 лоадер)
+3) Выводим ошибку загрузки книг
+PS) Извините, немного замешкался во второй половине видео
+
+[![Книгопись и Angular 2, часть 8](http://img.youtube.com/vi/dzLO7Irev6I/mqdefault.jpg)](http://www.youtube.com/watch?v=dzLO7Irev6I "Книгопись и Angular 2, часть 8")
