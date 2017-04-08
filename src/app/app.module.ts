@@ -1,3 +1,4 @@
+import { BookSearchPipe } from './pipes/book-search.pipe';
 import { BookComponent } from './components/book.component';
 import { UserBookListComponent } from './components/user-book-list.component';
 import { HomeComponent } from './components/home.component';
@@ -19,7 +20,8 @@ import { YearSortPipe } from './pipes/year-sort.pipe';
     HomeComponent,
     UserBookListComponent,
     BookComponent,
-    YearSortPipe
+    YearSortPipe,
+    BookSearchPipe
   ],
   imports: [
     BrowserModule,

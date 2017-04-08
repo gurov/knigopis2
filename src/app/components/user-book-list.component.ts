@@ -16,6 +16,7 @@ export class UserBookListComponent implements OnInit {
     private user: User = new User();
     private routeSub: Subscription;
     private bookGroups = [];
+    private error: string = '';
 
     constructor(private userService: UserService, private route: ActivatedRoute) {
 
@@ -32,19 +33,25 @@ export class UserBookListComponent implements OnInit {
 
                 return this.userService.getUserBooks(params['u']);
             })
-            .subscribe((list: Book[]) => {
-                this.userBooks = list;
-                const years = new Set(list.map(i => i.readYear));
-                this.bookGroups = Array.from(years)
-                    .sort()
-                    .reverse()
-                    .map(y => {
-                        return {
-                            year: y,
-                            count: this.userBooks.filter(b => b.readYear === y).length
-                        };
-                    });
-            });
+            .subscribe(this.bookLoadSucces, this.bookLoadFail);
+
+    }
+
+    bookLoadSucces = (list: Book[]) => {
+        console.log('LIST', list);
+        this.userBooks = list;
+        const years = new Set(list.map(i => i.readYear));
+        this.bookGroups = Array.from(years).sort().reverse()
+            .map(y => ({
+                year: y,
+                count: this.userBooks.filter(b => b.readYear === y).length
+            }));
+    }
+    bookLoadFail = (error: string) => {
+        this.error = error;
+        this.userBooks = [];
+        this.user = new User();
+        this.bookGroups = [];
     }
 
     ngOnDestroy() {
