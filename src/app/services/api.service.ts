@@ -16,6 +16,12 @@ export class ApiService {
             .catch(this.handleError)
     }
 
+    post(path: string, body: any): Observable<any> {
+        return this.http.post(path, body)
+            .map(data => data.text() ? data.json() : data)
+            .catch(this.handleError)
+    }
+
     handleError(error: Response | any) {
         let errMsg: string = '';
 

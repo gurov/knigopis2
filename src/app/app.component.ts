@@ -1,3 +1,4 @@
+import { AuthService } from './services/auth.service';
 import { UserService } from './services/user.service';
 import { List, Book, User } from './models';
 import { BookService } from './services/book.service';
@@ -11,7 +12,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  constructor() {
+  constructor(private authService: AuthService) {
+    this.authService.setAuthHook();
   }
 
 }

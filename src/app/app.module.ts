@@ -1,3 +1,4 @@
+import { AuthService } from './services/auth.service';
 import { BookSearchPipe } from './pipes/book-search.pipe';
 import { BookComponent } from './components/book.component';
 import { UserBookListComponent } from './components/user-book-list.component';
@@ -29,7 +30,7 @@ import { YearSortPipe } from './pipes/year-sort.pipe';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [BookService, UserService, ApiService],
+  providers: [BookService, UserService, ApiService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
