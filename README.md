@@ -12,8 +12,15 @@ Angular 2 клиент для [api.knigopis.com](https://github.com/knigopis/api
 4) Установить зависимости `npm i`
 5) Запустить проект `npm run start`
 
+## Не забыть сделать
+Фичи, которые я оставил на потом, но с радостью приму на них пулреквесты:
 
-## Часть 1
+* В списке прочитанных книг скролл к выбранному году при клике на соответствующий пункт в меню;
+* Отображение новых прочитанных книг у недавних пользователей, на которых ты подписан на главной странице.
+
+## Разработка шаг за шагом
+
+### Часть 1
 
 1) О сайте книгописи
 2) Костяк проекта на Angular 2
@@ -21,7 +28,7 @@ Angular 2 клиент для [api.knigopis.com](https://github.com/knigopis/api
 
 [![Книгопись и Angular 2, часть 1](http://img.youtube.com/vi/yC49u1Y5faE/mqdefault.jpg)](http://www.youtube.com/watch?v=yC49u1Y5faE "Книгопись и Angular 2, часть 1")
 
-## Часть 2
+### Часть 2
 
 1) Создаем bookService для обращения к api
 2) RxJs и Observable объекты
@@ -31,7 +38,7 @@ Angular 2 клиент для [api.knigopis.com](https://github.com/knigopis/api
 [![Книгопись и Angular 2, часть 2](http://img.youtube.com/vi/TSANCWd1kNk/mqdefault.jpg)](http://www.youtube.com/watch?v=TSANCWd1kNk "Книгопись и Angular 2, часть 2")
 
 
-## Часть 3
+### Часть 3
 
 1) Обработка ошибок для bookService
 2) Расширяем настройки прокси
@@ -40,7 +47,7 @@ Angular 2 клиент для [api.knigopis.com](https://github.com/knigopis/api
 
 [![Книгопись и Angular 2, часть 3](http://img.youtube.com/vi/HbL1dmYIhdQ/mqdefault.jpg)](http://www.youtube.com/watch?v=HbL1dmYIhdQ "Книгопись и Angular 2, часть 3")
 
-## Часть 4
+### Часть 4
 
 1) Подключаем Bootstrap 4
 2) Создаем HomeComponent
@@ -48,7 +55,7 @@ Angular 2 клиент для [api.knigopis.com](https://github.com/knigopis/api
 
 [![Книгопись и Angular 2, часть 4](http://img.youtube.com/vi/s42urb3xkzY/mqdefault.jpg)](http://www.youtube.com/watch?v=s42urb3xkzY "Книгопись и Angular 2, часть 4")
 
-## Часть 5
+### Часть 5
 
 1) Создаем UserBookListComponent
 2) Добавляем getUserBooks функцию в UserService для получения списка книг
@@ -57,7 +64,7 @@ Angular 2 клиент для [api.knigopis.com](https://github.com/knigopis/api
 
 [![Книгопись и Angular 2, часть 5](http://img.youtube.com/vi/DGSUFjsutnw/mqdefault.jpg)](http://www.youtube.com/watch?v=DGSUFjsutnw "Книгопись и Angular 2, часть 5")
 
-## Часть 6
+### Часть 6
 
 1) Добавляем отписку от роута в UserBookListComponent
 2) Создаем BookComponent
@@ -67,7 +74,7 @@ Angular 2 клиент для [api.knigopis.com](https://github.com/knigopis/api
 
 [![Книгопись и Angular 2, часть 6](http://img.youtube.com/vi/Nt9FXoWvKpI/mqdefault.jpg)](http://www.youtube.com/watch?v=Nt9FXoWvKpI "Книгопись и Angular 2, часть 6")
 
-## Часть 7
+### Часть 7
 
 1) Добавляем оглавление (Bootstrap 4: list groups)
 2) Адаптируем под широкие экраны и мобильные телефоны (Bootstrap 4: `.push-md-*` and `.pull-md-*`)
@@ -75,7 +82,7 @@ Angular 2 клиент для [api.knigopis.com](https://github.com/knigopis/api
 
 [![Книгопись и Angular 2, часть 7](http://img.youtube.com/vi/iwFsj2p3VOg/mqdefault.jpg)](http://www.youtube.com/watch?v=iwFsj2p3VOg "Книгопись и Angular 2, часть 7")
 
-## Часть 8
+### Часть 8
 
 1) Добавляем поиск по книгам (BookSearchPipe)
 2) Добавляем анимацию загрузки книг (CSS3 лоадер)
@@ -84,7 +91,7 @@ PS) Извините, немного замешкался во второй по
 
 [![Книгопись и Angular 2, часть 8](http://img.youtube.com/vi/dzLO7Irev6I/mqdefault.jpg)](http://www.youtube.com/watch?v=dzLO7Irev6I "Книгопись и Angular 2, часть 8")
 
-## Часть 9.1
+### Часть 9.1
 
 1) Добавляем виджет авторизации (uLogin)
 2) Добавляем initAuth функцию в window (RxJs Subject, AuthService)
