@@ -83,3 +83,11 @@ Angular 2 клиент для [api.knigopis.com](https://github.com/knigopis/api
 PS) Извините, немного замешкался во второй половине видео
 
 [![Книгопись и Angular 2, часть 8](http://img.youtube.com/vi/dzLO7Irev6I/mqdefault.jpg)](http://www.youtube.com/watch?v=dzLO7Irev6I "Книгопись и Angular 2, часть 8")
+
+## Часть 9.1
+
+1) Добавляем виджет авторизации (uLogin)
+2) Добавляем initAuth функцию в window (RxJs Subject, AuthService)
+3) Получаем access-token (UserService, getCredentials, httpPost)
+
+[![Книгопись и Angular 2, часть 9.1](http://img.youtube.com/vi/DMHXDjKqsn0/mqdefault.jpg)](http://www.youtube.com/watch?v=DMHXDjKqsn0 "Книгопись и Angular 2, часть 9.1")
