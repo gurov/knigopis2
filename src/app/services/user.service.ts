@@ -1,4 +1,4 @@
-import { List, Book, User } from './../models';
+import { List, Book, User, Credentials } from './../models';
 import { Observable } from 'rxjs/Rx';
 import { Injectable } from '@angular/core';
 import { ApiService } from './api.service';
@@ -21,8 +21,12 @@ export class UserService {
         return this.api.get(this.path + '/' + userId);
     }
 
-    getCredentials(authToken: string): Observable<any> {
+    getCredentials(authToken: string): Observable<Credentials> {
         return this.api.post(this.path + '/get-credentials', { token: authToken });
+    }
+
+    getCurrentUser(): Observable<User> {
+        return this.api.get(this.path + '/current');
     }
 
 }

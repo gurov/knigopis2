@@ -3,6 +3,12 @@ export class User {
     nickname?: string;
     booksCount?: number;
     updatedAt?: string;
+    createdAt?: string;
+    identity?: string;
+    lang?: string;
+    photo?: string;
+    profile?: string;
+    subscriptions?: List<number>;
 }
 
 export class Book {
@@ -18,6 +24,11 @@ export class Book {
     readYear?: number;
     updatedAt?: string;
     userId?: string;
+}
+
+export class Credentials {
+    'access-token': string;
+    user: User = new User();
 }
 
 export interface List<T> {

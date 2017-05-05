@@ -1,6 +1,6 @@
 import { List } from './../models';
 import { Observable } from 'rxjs/Rx';
-import { Http, Response } from '@angular/http';
+import { Http, Response, Headers } from '@angular/http';
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
@@ -11,7 +11,9 @@ export class ApiService {
     constructor(private http: Http) { }
 
     get(path: string): Observable<List<any>> {
-        return this.http.get(path)
+        let headers = new Headers();
+        this.setAuthorization(headers);
+        return this.http.get(path, { headers })
             .map(data => data.text() ? data.json() : data)
             .catch(this.handleError)
     }
@@ -20,6 +22,10 @@ export class ApiService {
         return this.http.post(path, body)
             .map(data => data.text() ? data.json() : data)
             .catch(this.handleError)
+    }
+
+    setAuthorization(headers: Headers): void {
+        headers.append('Authorization', 'Bearer ' + localStorage.getItem('access-token'));
     }
 
     handleError(error: Response | any) {

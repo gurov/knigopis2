@@ -98,3 +98,13 @@ PS) Извините, немного замешкался во второй по
 3) Получаем access-token (UserService, getCredentials, httpPost)
 
 [![Книгопись и Angular 2, часть 9.1](http://img.youtube.com/vi/DMHXDjKqsn0/mqdefault.jpg)](http://www.youtube.com/watch?v=DMHXDjKqsn0 "Книгопись и Angular 2, часть 9.1")
+
+### Часть 9.2
+
+1) Изменяем модели (Credentials, User)
+2) Добавляем заголовок авторизации к запросам (ApiSerivice)
+3) Записываем токен в localStorage (AuthService)
+4) Запоминаем авторизованного пользователя (AuthService)
+4) Прячем uLogin меню и показываем юзера (AppComponent)
+
+[![Книгопись и Angular 2, часть 9.2](http://img.youtube.com/vi/kOzXQXm6Aks/mqdefault.jpg)](http://www.youtube.com/watch?v=kOzXQXm6Aks "Книгопись и Angular 2, часть 9.2")
