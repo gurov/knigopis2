@@ -38,7 +38,6 @@ export class UserBookListComponent implements OnInit {
     }
 
     bookLoadSucces = (list: Book[]) => {
-        console.log('LIST', list);
         this.userBooks = list;
         const years = new Set(list.map(i => i.readYear));
         this.bookGroups = Array.from(years).sort().reverse()

@@ -14,6 +14,7 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { YearSortPipe } from './pipes/year-sort.pipe';
+import { BookEditComponent } from "./components/book-edit.component";
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { YearSortPipe } from './pipes/year-sort.pipe';
     HomeComponent,
     UserBookListComponent,
     BookComponent,
+    BookEditComponent,
     YearSortPipe,
     BookSearchPipe
   ],

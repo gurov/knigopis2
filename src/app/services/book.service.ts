@@ -13,4 +13,12 @@ export class BookService {
     return this.api.get(this.path + '/latest-notes');
   }
 
+  get(bookId: string): Observable<Book> {
+    return this.api.get(this.path + '/' + bookId);
+  }
+
+  update(book: Book): Observable<Book> {
+    return this.api.put(this.path + '/' + book.id, book);
+  }
+
 }

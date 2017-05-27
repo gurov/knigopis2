@@ -108,3 +108,14 @@ PS) Извините, немного замешкался во второй по
 4) Прячем uLogin меню и показываем юзера (AppComponent)
 
 [![Книгопись и Angular 2, часть 9.2](http://img.youtube.com/vi/kOzXQXm6Aks/mqdefault.jpg)](http://www.youtube.com/watch?v=kOzXQXm6Aks "Книгопись и Angular 2, часть 9.2")
+
+### Часть 10
+
+1) Добавляем в верхнее меню ссылки на свой список книг и на страницу добавления книги (AppComponent)
+2) Добавляем компоненту редактирования книги (BookEditComponent)
+3) Добавляем ссылку с книги на страницу редактирования (BookComponent)
+4) Добавляем метод put в ApiService
+5) Добавляем методы get и update в BookService
+
+[![Книгопись и Angular 2, часть 10](http://img.youtube.com/vi/KFVFLhlFko8/mqdefault.jpg)](http://www.youtube.com/watch?v=KFVFLhlFko8 "Книгопись и Angular 2, часть 10")
+

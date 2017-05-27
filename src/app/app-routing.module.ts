@@ -2,6 +2,7 @@ import { UserBookListComponent } from './components/user-book-list.component';
 import { HomeComponent } from './components/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { BookEditComponent } from "./components/book-edit.component";
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: ':name/books',
     component: UserBookListComponent
+  },
+  {
+    path: 'books/:bookId',
+    component: BookEditComponent
   }
 ];
 

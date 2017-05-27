@@ -24,6 +24,14 @@ export class ApiService {
             .catch(this.handleError)
     }
 
+    put(path: string, body: any): Observable<any> {
+        let headers = new Headers();
+        this.setAuthorization(headers);
+        return this.http.put(path, body, { headers })
+            .map(data => data.text() ? data.json() : data)
+            .catch(this.handleError)
+    }
+
     setAuthorization(headers: Headers): void {
         headers.append('Authorization', 'Bearer ' + localStorage.getItem('access-token'));
     }

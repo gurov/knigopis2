@@ -8,9 +8,13 @@
       <a class="navbar-brand" [routerLink]="['/']">Книгопись</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleContainer">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto" *ngIf="isAuthorized">
           <li class="nav-item">
-            <a class="nav-link" href="#">Test</a>
+            <a class="nav-link" [routerLink]="[currentUser.nickname, 'books']"
+              [queryParams]="{u: currentUser.id}">Мой список книг</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/books', 'add']">Добавить книгу</a>
           </li>
         </ul>
         <div class="pull-right" [hidden]="isAuthorized">
