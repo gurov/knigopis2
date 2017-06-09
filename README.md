@@ -119,3 +119,13 @@ PS) Извините, немного замешкался во второй по
 
 [![Книгопись и Angular 2, часть 10](http://img.youtube.com/vi/KFVFLhlFko8/mqdefault.jpg)](http://www.youtube.com/watch?v=KFVFLhlFko8 "Книгопись и Angular 2, часть 10")
 
+### Часть 11
+
+1) Добавляем метод delete в ApiService
+2) Создаем общую функцию getRequestOptionsArgs для методов ApiService
+3) Добавляем метод remove а BookSerice и изменяем update
+4) Добавляем методы saveAndClose, saveAndAdd, remove в BookEditComponent
+
+[![Книгопись и Angular 2, часть 11](http://img.youtube.com/vi/EW-Cgu5fA1w/mqdefault.jpg)](http://www.youtube.com/watch?v=EW-Cgu5fA1w "Книгопись и Angular 2, часть 11")
+
+

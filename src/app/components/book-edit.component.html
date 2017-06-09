@@ -1,9 +1,14 @@
 <h2>Добавление записи о прочитанной книге</h2>
 <h6 class="text-muted">👁 Запись будет видна всем</h6>
-<form>
+<form #editBookForm="ngForm">
     <div class="form-group">
         <label>Заголовок книги</label>
-        <input name="title" [(ngModel)]="currentBook.title" type="text" class="form-control" placeholder="Укажите заголовок">
+        <input name="title"
+            [(ngModel)]="currentBook.title"
+            type="text"
+            class="form-control"
+            placeholder="Укажите заголовок"
+            required>
     </div>
     <div class="form-group">
         <label>Автор книги</label>
@@ -24,7 +29,25 @@
         <label>Ваши примечания</label>
         <textarea name="notes" [(ngModel)]="currentBook.notes" rows="5" class="form-control"></textarea>
     </div>
-    <div class="form-group">
-        <button class="btn btn-primary" (click)="save()">Сохранить</button>
+
+    <div class="alert alert-danger" role="alert" *ngIf="error">
+        <strong>Ошибка!</strong> {{error}}
     </div>
+
+    <div class="form-group row">
+        <div class="col-md-8">
+            <button class="btn btn-primary"
+                [disabled]="!form.valid"
+                (click)="saveAndClose()">Сохранить и закрыть</button>
+            <button class="btn btn-secondary ml-1"
+                [disabled]="!form.valid"
+                (click)="saveAndAdd()">Сохранить и добавить еще</button>
+        </div>
+        <div class="col-md-4 text-right">
+            <button class="btn btn-danger ml-auto"
+                [hidden]="!currentBook.id"
+                (click)="remove()">Удалить</button>
+        </div>
+    </div>
+
 </form>

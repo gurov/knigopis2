@@ -1,7 +1,10 @@
 import { Book } from './../models';
-import { Component, Input } from '@angular/core';
-import { ActivatedRoute } from "@angular/router";
+import { Component, Input, ViewChild } from '@angular/core';
+import { ActivatedRoute, Router } from "@angular/router";
 import { BookService } from "../services/book.service";
+import { Observable } from "rxjs/Observable";
+import { AuthService } from "../services/auth.service";
+import { NgForm } from "@angular/forms";
 
 @Component({
     selector: 'k-book-edit',
@@ -10,16 +13,51 @@ import { BookService } from "../services/book.service";
 export class BookEditComponent {
 
     private currentBook: Book = new Book();
+    private error: string;
 
-    constructor(private route: ActivatedRoute, private bookService: BookService) {
+    @ViewChild('editBookForm') form: NgForm;
+
+    constructor(private route: ActivatedRoute,
+        private router: Router,
+        private authService: AuthService,
+        private bookService: BookService) {
         this.route.params
+            .filter(params => params['bookId'] !== 'add')
             .switchMap(params => this.bookService.get(params['bookId']))
             .subscribe(book => this.currentBook = book);
+
+        this.route.params
+            .filter(params => params['bookId'] === 'add')
+            .subscribe(book => this.currentBook = new Book());
     }
 
-    save() {
+    saveAndClose() {
+        this.form.form.disable();
         this.bookService.update(this.currentBook).subscribe(response => {
-            console.log('bookService.update', response);
+            const user = this.authService.getCurrentUser();
+            this.router.navigate(['/', user.nickname, 'books'], { queryParams: { u: user.id } });
+        }, error => this.error = error, () => {
+            this.form.form.enable();
+        });
+    }
+
+    saveAndAdd() {
+        this.form.form.disable();
+        this.bookService.update(this.currentBook).subscribe(response => {
+            this.currentBook = new Book();
+            this.router.navigate(['/books', 'add']);
+        }, error => this.error = error, () => {
+            this.form.form.enable();
+        });
+    }
+
+    remove() {
+        this.form.form.disable();
+        this.bookService.remove(this.currentBook.id).subscribe(response => {
+            const user = this.authService.getCurrentUser();
+            this.router.navigate(['/', user.nickname, 'books'], { queryParams: { u: user.id } });
+        }, error => this.error = error, () => {
+            this.form.form.enable();
         });
     }
 }

@@ -1,6 +1,6 @@
 import { List } from './../models';
 import { Observable } from 'rxjs/Rx';
-import { Http, Response, Headers } from '@angular/http';
+import { Http, Response, Headers, RequestOptionsArgs } from '@angular/http';
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
@@ -10,30 +10,34 @@ export class ApiService {
 
     constructor(private http: Http) { }
 
-    get(path: string): Observable<List<any>> {
-        let headers = new Headers();
-        this.setAuthorization(headers);
-        return this.http.get(path, { headers })
+    get(path: string): Observable<any> {
+        return this.http.get(path, this.getRequestOptionsArgs())
             .map(data => data.text() ? data.json() : data)
-            .catch(this.handleError)
+            .catch(this.handleError);
+    }
+
+    delete(path: string): Observable<any> {
+        return this.http.delete(path, this.getRequestOptionsArgs())
+            .map(data => data.text() ? data.json() : data)
+            .catch(this.handleError);
     }
 
     post(path: string, body: any): Observable<any> {
-        return this.http.post(path, body)
+        return this.http.post(path, body, this.getRequestOptionsArgs())
             .map(data => data.text() ? data.json() : data)
-            .catch(this.handleError)
+            .catch(this.handleError);
     }
 
     put(path: string, body: any): Observable<any> {
-        let headers = new Headers();
-        this.setAuthorization(headers);
-        return this.http.put(path, body, { headers })
+        return this.http.put(path, body, this.getRequestOptionsArgs())
             .map(data => data.text() ? data.json() : data)
-            .catch(this.handleError)
+            .catch(this.handleError);
     }
 
-    setAuthorization(headers: Headers): void {
+    getRequestOptionsArgs(): RequestOptionsArgs {
+        let headers = new Headers();
         headers.append('Authorization', 'Bearer ' + localStorage.getItem('access-token'));
+        return { headers };
     }
 
     handleError(error: Response | any) {
