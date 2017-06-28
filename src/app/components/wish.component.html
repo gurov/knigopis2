@@ -1,0 +1,18 @@
+<div class="mb-2 pt-2 book-box">
+    <h5>
+        <span class="badge badge-default badge-pill mr-1">{{book.priority}}</span>
+        {{book.title}}
+        <span class="hidden-md-down book-title-btns ml-2">
+            <a [routerLink]="['/wish/edit', book.id]" class="small">[редактировать]</a>
+            <a [routerLink]="['/wish/edit', book.id]" class="small">[прочитано!]</a>
+        </span>
+    </h5>
+    <h6>{{book.author}}</h6>
+    <p class="text-muted">
+        [{{book.createdAt.split(' ')[0]}}] <span>{{book.notes}}</span>
+    </p>
+    <div class="hidden-lg-up">
+        <a [routerLink]="['/wish/edit', book.id]" class="btn btn-sm btn-secondary">Редактировать</a>
+        <a [routerLink]="['/wish/edit', book.id]" class="btn btn-sm btn-secondary">Прочитано!</a>
+    </div>
+</div>

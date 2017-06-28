@@ -3,6 +3,7 @@ import { HomeComponent } from './components/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BookEditComponent } from "./components/book-edit.component";
+import { WishListComponent } from "./components/wish-list.component";
 
 const routes: Routes = [
   {
@@ -17,6 +18,14 @@ const routes: Routes = [
   {
     path: 'books/:bookId',
     component: BookEditComponent
+  },
+  {
+    path: 'wish/:bookId',
+    component: WishListComponent
+  },
+  {
+    path: 'wish/:bookId',
+    component: WishListComponent
   }
 ];
 

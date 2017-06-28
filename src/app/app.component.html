@@ -16,6 +16,12 @@
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['/books', 'add']">Добавить книгу</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/wish', 'list']">Список к прочтению</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/wish', 'add']">Добавить к прочтению</a>
+          </li>
         </ul>
         <div class="pull-right" [hidden]="isAuthorized">
           <span class="text-white">Войти через</span>

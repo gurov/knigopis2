@@ -24,6 +24,7 @@ export class Book {
     readYear?: number;
     updatedAt?: string;
     userId?: string;
+    priority?: number;
 }
 
 export class Credentials {

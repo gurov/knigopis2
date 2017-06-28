@@ -15,6 +15,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { YearSortPipe } from './pipes/year-sort.pipe';
 import { BookEditComponent } from "./components/book-edit.component";
+import { WishService } from "./services/wish.service";
+import { WishListComponent } from "./components/wish-list.component";
+import { WishComponent } from "./components/wish.component";
 
 @NgModule({
   declarations: [
@@ -23,6 +26,8 @@ import { BookEditComponent } from "./components/book-edit.component";
     UserBookListComponent,
     BookComponent,
     BookEditComponent,
+    WishListComponent,
+    WishComponent,
     YearSortPipe,
     BookSearchPipe
   ],
@@ -32,7 +37,13 @@ import { BookEditComponent } from "./components/book-edit.component";
     HttpModule,
     AppRoutingModule
   ],
-  providers: [BookService, UserService, ApiService, AuthService],
+  providers: [
+    BookService,
+    UserService,
+    ApiService,
+    AuthService,
+    WishService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

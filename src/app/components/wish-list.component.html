@@ -1,0 +1,12 @@
+<h3>Список к прочтению</h3>
+<h6 class="text-muted">Сейчас виден только вам, но когда-нибудь может быть прочитан другими</h6>
+
+<hr>
+
+<div [hidden]="wishList || error">
+    <span class="loader"></span> Загрузка ...
+</div>
+
+<div *ngIf="wishList?.length">
+    <k-wish *ngFor="let book of wishList" [book]="book"></k-wish>
+</div>

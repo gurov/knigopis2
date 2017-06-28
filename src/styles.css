@@ -15,3 +15,13 @@
   0%    { transform: rotate(0deg); }
   100%  { transform: rotate(2840deg); }
 }
+
+@media (min-width: 991px) {
+  .book-box:hover .hidden-md-down.book-title-btns {
+      display: inline-block;
+  }
+  .book-box .hidden-md-down.book-title-btns {
+      display: none;
+  }
+}
+
