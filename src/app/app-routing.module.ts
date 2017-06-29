@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BookEditComponent } from "./components/book-edit.component";
 import { WishListComponent } from "./components/wish-list.component";
+import { WishEditComponent } from "./components/wish-edit.component";
 
 const routes: Routes = [
   {
@@ -20,12 +21,12 @@ const routes: Routes = [
     component: BookEditComponent
   },
   {
-    path: 'wish/:bookId',
+    path: 'wish/list',
     component: WishListComponent
   },
   {
-    path: 'wish/:bookId',
-    component: WishListComponent
+    path: 'wish/edit/:bookId',
+    component: WishEditComponent
   }
 ];
 

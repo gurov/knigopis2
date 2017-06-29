@@ -12,15 +12,16 @@ import { NgForm } from "@angular/forms";
 })
 export class BookEditComponent {
 
-    protected currentBook: Book = new Book();
-    protected error: string;
+    private currentBook: Book = new Book();
+    private error: string;
+    private pageName: string = 'bookList';
 
     @ViewChild('editBookForm') form: NgForm;
 
-    constructor(protected route: ActivatedRoute,
-        protected router: Router,
-        protected authService: AuthService,
-        protected bookService: BookService) {
+    constructor(private route: ActivatedRoute,
+        private router: Router,
+        private authService: AuthService,
+        private bookService: BookService) {
         this.route.params
             .filter(params => params['bookId'] !== 'add')
             .switchMap(params => this.bookService.get(params['bookId']))

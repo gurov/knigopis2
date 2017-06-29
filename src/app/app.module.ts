@@ -18,6 +18,7 @@ import { BookEditComponent } from "./components/book-edit.component";
 import { WishService } from "./services/wish.service";
 import { WishListComponent } from "./components/wish-list.component";
 import { WishComponent } from "./components/wish.component";
+import { WishEditComponent } from "./components/wish-edit.component";
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { WishComponent } from "./components/wish.component";
     BookEditComponent,
     WishListComponent,
     WishComponent,
+    WishEditComponent,
     YearSortPipe,
     BookSearchPipe
   ],

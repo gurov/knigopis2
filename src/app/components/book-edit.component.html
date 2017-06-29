@@ -1,6 +1,13 @@
-<h2>Добавление записи о прочитанной книге</h2>
-<h6 class="text-muted">👁 Запись будет видна всем</h6>
-<form #editBookForm="ngForm">
+<div *ngIf="pageName === 'wish'">
+    <h2>Добавление книги, чтобы прочитать позже</h2>
+    <h6 class="text-muted">🕶 Запись может быть прочитана кем-то другим когда-нибудь</h6>
+</div>
+<div *ngIf="pageName === 'bookList'">
+    <h2>Добавление записи о прочитанной книге</h2>
+    <h6 class="text-muted">👁 Запись будет видна всем</h6>
+</div>
+
+<form #editBookForm="ngForm" class="mt-4">
     <div class="form-group">
         <label>Заголовок книги</label>
         <input name="title"
@@ -10,11 +17,23 @@
             placeholder="Укажите заголовок"
             required>
     </div>
+
     <div class="form-group">
         <label>Автор книги</label>
         <input type="text" name="author" [(ngModel)]="currentBook.author" class="form-control" placeholder="Укажите автора">
     </div>
-    <div class="form-group">
+
+    <div class="form-group" *ngIf="pageName === 'wish'">
+        <label>Приоритет к прочтению</label>
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-5 col-xl-4">
+                <input type="number" [(ngModel)]="currentBook.priority" name="priority" class="form-control" min="1" max="100">
+                <small class="form-text text-muted">Укажите число от 1 до 100. Чем больше число, темы выше в списке будет запись.</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group" *ngIf="pageName === 'bookList'">
         <label>Приблизительная дата прочтения книги</label>
         <div class="row">
             <div class="input-group col-sm-12 col-md-6 col-lg-5 col-xl-4">
@@ -23,8 +42,8 @@
                 <input type="number" [(ngModel)]="currentBook.readDay" name="readDay" class="form-control" placeholder="День">
             </div>
         </div>
-
     </div>
+
     <div class="form-group">
         <label>Ваши примечания</label>
         <textarea name="notes" [(ngModel)]="currentBook.notes" rows="5" class="form-control"></textarea>
