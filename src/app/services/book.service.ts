@@ -7,13 +7,14 @@ import {WishService} from "./wish.service";
 @Injectable()
 export class BookService extends WishService {
 
-  protected path: string = '/books';
-  constructor(protected api: ApiService) {
-    super(api);
-  }
+    protected path: string = '/books';
 
-  getLatestNotes(): Observable<List<Book>> {
-    return this.api.get(this.path + '/latest-notes');
-  }
+    constructor(protected api: ApiService) {
+        super(api);
+    }
+
+    getLatestNotes(): Observable<List<Book>> {
+        return this.api.get(this.path + '/latest-notes');
+    }
 
 }

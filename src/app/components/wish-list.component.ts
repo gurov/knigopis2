@@ -19,8 +19,8 @@ export class WishListComponent {
     private error: string = '';
 
     constructor(private userService: UserService,
-        private route: ActivatedRoute,
-        private wishService: WishService) {
+                private route: ActivatedRoute,
+                private wishService: WishService) {
         this.wishService.getAll()
             .subscribe(response => this.wishList = response.sort((a, b) => b.priority - a.priority));
     }

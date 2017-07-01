@@ -7,7 +7,8 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class ApiService {
 
-    constructor(private http: Http) { }
+    constructor(private http: Http) {
+    }
 
     get(path: string): Observable<any> {
         return this.http.get(path, this.getRequestOptionsArgs())
@@ -36,7 +37,7 @@ export class ApiService {
     getRequestOptionsArgs(): RequestOptionsArgs {
         let headers = new Headers();
         headers.append('Authorization', 'Bearer ' + localStorage.getItem('access-token'));
-        return { headers };
+        return {headers};
     }
 
     handleError(error: Response | any) {

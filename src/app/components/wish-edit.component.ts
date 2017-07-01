@@ -19,9 +19,9 @@ export class WishEditComponent {
     @ViewChild('editBookForm') form: NgForm;
 
     constructor(private route: ActivatedRoute,
-        private router: Router,
-        private authService: AuthService,
-        private wishService: WishService) {
+                private router: Router,
+                private authService: AuthService,
+                private wishService: WishService) {
         this.route.params
             .filter(params => params['bookId'] !== 'add')
             .switchMap(params => this.wishService.get(params['bookId']))

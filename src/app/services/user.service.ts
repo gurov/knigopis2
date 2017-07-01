@@ -7,7 +7,9 @@ import {ApiService} from './api.service';
 export class UserService {
 
     private path: string = '/users';
-    constructor(private api: ApiService) { }
+
+    constructor(private api: ApiService) {
+    }
 
     getLatest(): Observable<List<User>> {
         return this.api.get(this.path + '/latest');
@@ -22,7 +24,7 @@ export class UserService {
     }
 
     getCredentials(authToken: string): Observable<Credentials> {
-        return this.api.post(this.path + '/get-credentials', { token: authToken });
+        return this.api.post(this.path + '/get-credentials', {token: authToken});
     }
 
     getCurrentUser(): Observable<User> {

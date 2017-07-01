@@ -1,45 +1,47 @@
 <div class="bg-inverse">
-  <div class="container">
-    <nav class="navbar navbar-inverse bg-inverse navbar-toggleable-md">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleContainer"
-        aria-controls="navbarsExampleContainer" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-      <a class="navbar-brand" [routerLink]="['/']">Книгопись</a>
+    <div class="container">
+        <nav class="navbar navbar-inverse bg-inverse navbar-toggleable-md">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                    data-target="#navbarsExampleContainer"
+                    aria-controls="navbarsExampleContainer" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" [routerLink]="['/']">Книгопись</a>
 
-      <div class="collapse navbar-collapse" id="navbarsExampleContainer">
-        <ul class="navbar-nav mr-auto" *ngIf="isAuthorized">
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="[currentUser.nickname, 'books']"
-              [queryParams]="{u: currentUser.id}">Мой список книг</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/books', 'add']">Добавить книгу</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/wish', 'list']">Список к прочтению</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/wish', 'edit', 'add']">Добавить к прочтению</a>
-          </li>
-        </ul>
-        <div class="pull-right" [hidden]="isAuthorized">
-          <span class="text-white">Войти через</span>
-          <div id="uLogin" data-ulogin="display=small;theme=classic;fields=first_name,last_name;providers=vkontakte,odnoklassniki,mailru,facebook;hidden=other;redirect_uri=;mobilebuttons=0;callback=initAuth"></div>
-        </div>
-        <ul class="navbar-nav pull-right">
-          <li class="nav-item dropdown">
-            <a class="nav-link" href data-toggle="dropdown">{{currentUser?.nickname}}</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" (click)="exit()">Выход</a>
+            <div class="collapse navbar-collapse" id="navbarsExampleContainer">
+                <ul class="navbar-nav mr-auto" *ngIf="isAuthorized">
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="[currentUser.nickname, 'books']"
+                           [queryParams]="{u: currentUser.id}">Мой список книг</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/books', 'add']">Добавить книгу</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/wish', 'list']">Список к прочтению</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/wish', 'edit', 'add']">Добавить к прочтению</a>
+                    </li>
+                </ul>
+                <div class="pull-right" [hidden]="isAuthorized">
+                    <span class="text-white">Войти через</span>
+                    <div id="uLogin"
+                         data-ulogin="display=small;theme=classic;fields=first_name,last_name;providers=vkontakte,odnoklassniki,mailru,facebook;hidden=other;redirect_uri=;mobilebuttons=0;callback=initAuth"></div>
+                </div>
+                <ul class="navbar-nav pull-right">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href data-toggle="dropdown">{{currentUser?.nickname}}</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" (click)="exit()">Выход</a>
+                        </div>
+                    </li>
+                </ul>
             </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
+        </nav>
+    </div>
 </div>
 
 <div class="container pt-3">
-  <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
 </div>

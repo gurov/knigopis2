@@ -1,30 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
 .loader {
-  height: 0.8rem;
-  width: 0.3rem;
-  display: inline-block;
-  animation: rotate 3s infinite ease-out;
-  border: 2px solid #444;
-  border-right-color: transparent;
-  border-left-color: transparent;
-  border-radius: 50%;
-  background-color: red;
+    height: 0.8rem;
+    width: 0.3rem;
+    display: inline-block;
+    animation: rotate 3s infinite ease-out;
+    border: 2px solid #444;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-radius: 50%;
+    background-color: red;
 }
 
 @keyframes rotate {
-  0%    { transform: rotate(0deg); }
-  100%  { transform: rotate(2840deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(2840deg);
+    }
 }
 
 @media (min-width: 991px) {
-  .book-box:hover .hidden-md-down.book-title-btns {
-      display: inline-block;
-  }
-  .book-box .hidden-md-down.book-title-btns {
-      display: none;
-  }
+    .book-box:hover .hidden-md-down.book-title-btns {
+        display: inline-block;
+    }
+
+    .book-box .hidden-md-down.book-title-btns {
+        display: none;
+    }
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
+    font-weight: 400;
 }

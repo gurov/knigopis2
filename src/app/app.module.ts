@@ -21,31 +21,32 @@ import {WishComponent} from "./components/wish.component";
 import {WishEditComponent} from "./components/wish-edit.component";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    UserBookListComponent,
-    BookComponent,
-    BookEditComponent,
-    WishListComponent,
-    WishComponent,
-    WishEditComponent,
-    YearSortPipe,
-    BookSearchPipe
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    AppRoutingModule
-  ],
-  providers: [
-    BookService,
-    UserService,
-    ApiService,
-    AuthService,
-    WishService
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HomeComponent,
+        UserBookListComponent,
+        BookComponent,
+        BookEditComponent,
+        WishListComponent,
+        WishComponent,
+        WishEditComponent,
+        YearSortPipe,
+        BookSearchPipe
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        HttpModule,
+        AppRoutingModule
+    ],
+    providers: [
+        BookService,
+        UserService,
+        ApiService,
+        AuthService,
+        WishService
+    ],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

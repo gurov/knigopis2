@@ -1,6 +1,7 @@
 <div class="jumbotron mt-4">
     <h1 class="display-4">Привет, читатель!</h1>
-    <p class="lead">Этот сервис создан для того, чтобы вы могли сохранить и в любое время получить список прочитанных вами книг.</p>
+    <p class="lead">Этот сервис создан для того, чтобы вы могли сохранить и в любое время получить список прочитанных
+        вами книг.</p>
     <p class="lead">
         <a class="btn btn-primary btn-lg" href="#" role="button">Добавить запись о книге »</a>
     </p>
@@ -9,7 +10,7 @@
 <ul class="list-inline">
     <li *ngFor="let user of latestUsers" class="list-inline-item">
         <a [routerLink]="[user.nickname, 'books']"
-            [queryParams]="{u: user.id}">{{user.nickname}}</a>
+           [queryParams]="{u: user.id}">{{user.nickname}}</a>
         <sup>{{user.booksCount}}</sup>
     </li>
 </ul>
