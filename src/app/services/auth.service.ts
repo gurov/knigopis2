@@ -8,7 +8,7 @@ export class AuthService {
 
     private authHook: Subject<string> = new Subject();
     private currentUser: User;
-    public isAuthorized: Subject<boolean> = new Subject()
+    public isAuthorized: Subject<boolean> = new Subject();
 
     constructor(private userService: UserService) {
         window['authHook'] = this.authHook;
@@ -19,7 +19,7 @@ export class AuthService {
             this.userService.getCurrentUser().subscribe(user => {
                 this.currentUser = user;
                 this.isAuthorized.next(true);
-            }, error => {
+            }, () => {
                 this.isAuthorized.next(false);
             })
         } else {
