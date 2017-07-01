@@ -1,9 +1,6 @@
-import { AuthService } from './services/auth.service';
-import { UserService } from './services/user.service';
-import { List, Book, User } from './models';
-import { BookService } from './services/book.service';
-import { Observable } from 'rxjs/Rx';
-import { Component, ChangeDetectorRef } from '@angular/core';
+import {AuthService} from './services/auth.service';
+import {User} from './models';
+import {ChangeDetectorRef, Component} from '@angular/core';
 
 @Component({
   selector: 'k-root',

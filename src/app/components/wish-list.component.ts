@@ -1,10 +1,9 @@
-import { ActivatedRoute } from '@angular/router';
-import { UserService } from './../services/user.service';
-import { Book, User, List } from './../models';
-import { Observable } from 'rxjs/Rx';
-import { Component, OnInit } from '@angular/core';
-import { Subscription } from "rxjs/Subscription";
-import { WishService } from "../services/wish.service";
+import {ActivatedRoute} from '@angular/router';
+import {UserService} from './../services/user.service';
+import {Book, User} from './../models';
+import {Component} from '@angular/core';
+import {Subscription} from "rxjs/Subscription";
+import {WishService} from "../services/wish.service";
 
 @Component({
     selector: 'k-wish-list',

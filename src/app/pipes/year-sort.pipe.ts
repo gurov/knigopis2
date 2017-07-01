@@ -1,5 +1,5 @@
-import { Book } from './../models';
-import { Pipe, PipeTransform } from '@angular/core';
+import {Book} from './../models';
+import {Pipe, PipeTransform} from '@angular/core';
 
 @Pipe({
   name: 'yearSort'

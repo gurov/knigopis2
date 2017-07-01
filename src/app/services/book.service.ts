@@ -1,8 +1,8 @@
-import { ApiService } from './api.service';
-import { List, Book } from './../models';
-import { Observable } from 'rxjs/Rx';
-import { Injectable } from '@angular/core';
-import { WishService } from "./wish.service";
+import {ApiService} from './api.service';
+import {Book, List} from './../models';
+import {Observable} from 'rxjs/Rx';
+import {Injectable} from '@angular/core';
+import {WishService} from "./wish.service";
 
 @Injectable()
 export class BookService extends WishService {

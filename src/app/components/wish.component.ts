@@ -1,5 +1,5 @@
-import { Book } from './../models';
-import { Component, Input } from '@angular/core';
+import {Book} from './../models';
+import {Component, Input} from '@angular/core';
 
 @Component({
     selector: 'k-wish',

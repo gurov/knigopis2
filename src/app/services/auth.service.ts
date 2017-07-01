@@ -1,8 +1,7 @@
-import { UserService } from './user.service';
-import { Observable } from 'rxjs/Rx';
-import { Injectable } from '@angular/core';
-import { Subject } from "rxjs/Subject";
-import { User } from "../models";
+import {UserService} from './user.service';
+import {Injectable} from '@angular/core';
+import {Subject} from "rxjs/Subject";
+import {User} from "../models";
 
 @Injectable()
 export class AuthService {

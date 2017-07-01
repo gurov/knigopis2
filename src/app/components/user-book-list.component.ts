@@ -1,9 +1,8 @@
-import { ActivatedRoute } from '@angular/router';
-import { UserService } from './../services/user.service';
-import { Book, User, List } from './../models';
-import { Observable } from 'rxjs/Rx';
-import { Component, OnInit } from '@angular/core';
-import { Subscription } from "rxjs/Subscription";
+import {ActivatedRoute} from '@angular/router';
+import {UserService} from './../services/user.service';
+import {Book, User} from './../models';
+import {Component, OnInit} from '@angular/core';
+import {Subscription} from "rxjs/Subscription";
 
 @Component({
     selector: 'k-user-books',

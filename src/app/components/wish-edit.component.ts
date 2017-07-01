@@ -1,10 +1,10 @@
-import { Book } from './../models';
-import { Component, Input, ViewChild } from '@angular/core';
-import { ActivatedRoute, Router } from "@angular/router";
-import { Observable } from "rxjs/Observable";
-import { AuthService } from "../services/auth.service";
-import { NgForm } from "@angular/forms";
-import { WishService } from "../services/wish.service";
+import {Book} from './../models';
+import {Component, ViewChild} from '@angular/core';
+import {ActivatedRoute, Router} from "@angular/router";
+import {Observable} from "rxjs/Observable";
+import {AuthService} from "../services/auth.service";
+import {NgForm} from "@angular/forms";
+import {WishService} from "../services/wish.service";
 
 @Component({
     selector: 'k-wish-edit',
