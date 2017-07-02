@@ -6,7 +6,7 @@ import {Component, Input} from '@angular/core';
     templateUrl: './book.component.html'
 })
 export class BookComponent {
-    @Input() book: Book;
+    @Input() book: Book = new Book();
 
     constructor() {
 

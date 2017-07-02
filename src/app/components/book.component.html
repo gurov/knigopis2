@@ -7,7 +7,7 @@
     </h5>
     <h6>{{book.author}}</h6>
     <p class="text-muted">
-        [{{book.createdAt.split(' ')[0]}}] <span>{{book.notes}}</span>
+        [{{book.createdAt ? book.createdAt.split(' ')[0] : ''}}] <span>{{book.notes}}</span>
     </p>
     <div class="hidden-lg-up">
         <a [routerLink]="['/books', book.id]" class="btn btn-sm btn-secondary">Редактировать</a>
