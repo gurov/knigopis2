@@ -1,0 +1,18 @@
+#
+# Copyright © 2016 Aram Meem Company Limited.  All Rights Reserved.
+#
+machine:
+  node:
+    version: 6.9.1
+
+dependencies:
+  override:
+    - yarn
+    - yarn build
+  cache_directories:
+      - ~/.cache/yarn
+
+test:
+  override:
+    - yarn test
+
