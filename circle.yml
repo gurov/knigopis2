@@ -7,12 +7,10 @@ machine:
 
 dependencies:
   override:
-    - yarn
-    - yarn build
-  cache_directories:
-      - ~/.cache/yarn
+    - npm i
+    - npm run build
 
 test:
   override:
-    - yarn test
+    - npm run test
 

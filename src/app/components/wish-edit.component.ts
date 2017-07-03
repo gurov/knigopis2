@@ -12,9 +12,9 @@ import {WishService} from "../services/wish.service";
 })
 export class WishEditComponent {
 
-    private currentBook: Book = new Book();
-    private error: string;
-    private pageName: string = 'wish';
+    public currentBook: Book = new Book();
+    public error: string;
+    public pageName: string = 'wish';
 
     @ViewChild('editBookForm') form: NgForm;
 

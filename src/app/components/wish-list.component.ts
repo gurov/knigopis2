@@ -11,12 +11,12 @@ import {WishService} from "../services/wish.service";
 })
 export class WishListComponent {
 
-    private wishList: Book[];
-    private userId: string;
-    private user: User = new User();
-    private routeSub: Subscription;
-    private bookGroups = [];
-    private error: string = '';
+    public wishList: Book[];
+    public userId: string;
+    public user: User = new User();
+    public routeSub: Subscription;
+    public bookGroups = [];
+    public error: string = '';
 
     constructor(private userService: UserService,
                 private route: ActivatedRoute,

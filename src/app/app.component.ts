@@ -9,8 +9,8 @@ import {ChangeDetectorRef, Component} from '@angular/core';
 })
 export class AppComponent {
 
-    private isAuthorized: boolean = false;
-    private currentUser: User;
+    public isAuthorized: boolean = false;
+    public currentUser: User;
 
     constructor(private authService: AuthService, private ref: ChangeDetectorRef) {
         this.authService.setAuthHook();

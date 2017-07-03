@@ -9,8 +9,8 @@ import {Component} from '@angular/core';
 })
 export class HomeComponent {
 
-    private latestNoteBooks: Book[];
-    private latestUsers: User[];
+    public latestNoteBooks: Book[];
+    public latestUsers: User[];
 
     constructor(private bookService: BookService, private userService: UserService) {
         this.bookService.getLatestNotes().subscribe((list: List<Book>) => {

@@ -2,7 +2,6 @@ import {ActivatedRoute} from '@angular/router';
 import {UserService} from './../services/user.service';
 import {Book, User} from './../models';
 import {Component, OnInit} from '@angular/core';
-import {Subscription} from "rxjs/Subscription";
 
 @Component({
     selector: 'k-user-books',
@@ -10,12 +9,11 @@ import {Subscription} from "rxjs/Subscription";
 })
 export class UserBookListComponent implements OnInit {
 
-    private userBooks: Book[];
-    private userId: string;
-    private user: User = new User();
-    private routeSub: Subscription;
-    private bookGroups = [];
-    private error: string = '';
+    public userBooks: Book[];
+    public userId: string;
+    public user: User = new User();
+    public bookGroups = [];
+    public error: string = '';
 
     constructor(private userService: UserService, private route: ActivatedRoute) {
 
@@ -23,7 +21,7 @@ export class UserBookListComponent implements OnInit {
 
     ngOnInit() {
 
-        this.routeSub = this.route.queryParams
+        this.route.queryParams
             .switchMap(params => {
                 this.userId = params['u'];
 
@@ -44,17 +42,13 @@ export class UserBookListComponent implements OnInit {
                 year: y,
                 count: this.userBooks.filter(b => b.readYear === y).length
             }));
-    }
+    };
+
     bookLoadFail = (error: string) => {
         this.error = error;
         this.userBooks = [];
         this.user = new User();
         this.bookGroups = [];
-    }
-
-    ngOnDestroy() {
-        this.routeSub.unsubscribe();
-    }
-
+    };
 
 }

@@ -12,9 +12,9 @@ import {NgForm} from "@angular/forms";
 })
 export class BookEditComponent {
 
-    private currentBook: Book = new Book();
-    private error: string;
-    private pageName: string = 'bookList';
+    public currentBook: Book = new Book();
+    public error: string;
+    public pageName: string = 'bookList';
 
     @ViewChild('editBookForm') form: NgForm;
 
