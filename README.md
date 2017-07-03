@@ -1,6 +1,6 @@
-# Knigopis2
+# Knigopis2 
 
-Angular 2 клиент для [api.knigopis.com](https://github.com/knigopis/api.knigopis.com).
+Angular 2 клиент для [api.knigopis.com](https://github.com/knigopis/api.knigopis.com). Tests: [![CircleCI](https://circleci.com/gh/gurov/knigopis2/tree/master.svg?style=svg&circle-token=17f0b5b5162c47741913d49d9fafcaa6232ca61a)](https://circleci.com/gh/gurov/knigopis2/tree/master)
 
 Есть такой сайт [www.knigopis.com](http://www.knigopis.com/) — дневник читателя и сервис учёта прочитанных книг. Его создатель - мой друг [Роман](http://github.com/rnixik). Клиентская часть сайта Книгописи написана на первом Ангуляре, а в данном проекте я пытаюсь написать клиентскую часть на Ангуляре 2 и параллельно изучаю его. Для работы с книгами использую прокси и [api.knigopis.com](https://github.com/knigopis/api.knigopis.com).
 
@@ -11,12 +11,6 @@ Angular 2 клиент для [api.knigopis.com](https://github.com/knigopis/api
 3) Зайти в полученный резозиторий `cd knigopis2`;
 4) Установить зависимости `npm i`
 5) Запустить проект `npm run start`
-
-## Не забыть сделать
-Фичи, которые я оставил на потом, но с радостью приму на них пулреквесты:
-
-* В списке прочитанных книг скролл к выбранному году при клике на соответствующий пункт в меню;
-* Отображение новых прочитанных книг у недавних пользователей, на которых ты подписан на главной странице.
 
 ## Разработка шаг за шагом
 

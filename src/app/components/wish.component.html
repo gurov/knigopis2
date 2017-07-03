@@ -13,6 +13,6 @@
     </p>
     <div class="hidden-lg-up">
         <a [routerLink]="['/wish/edit', book.id]" class="btn btn-sm btn-secondary">Редактировать</a>
-        <a [routerLink]="['/wish/edit', book.id]" class="btn btn-sm btn-secondary">Прочитано!</a>
+        <a [routerLink]="['/books/add']" [queryParams]="{w: book.id}" class="btn btn-sm btn-secondary">Прочитано!</a>
     </div>
 </div>

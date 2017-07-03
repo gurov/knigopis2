@@ -1,6 +1,6 @@
 {
-  "name": "knigopis-ang2",
-  "version": "0.1.0",
+    "name": "knigopis2",
+    "version": "2.1.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
