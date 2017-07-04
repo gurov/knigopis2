@@ -1,4 +1,4 @@
-import {Book} from './../models';
+import {Book} from '../models';
 import {Component, ViewChild} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {BookService} from "../services/book.service";
@@ -16,6 +16,7 @@ export class BookEditComponent {
     public currentBook: Book = new Book();
     public error: string;
     public pageName: string = 'bookList';
+    public wishId: string = null;
 
     @ViewChild('editBookForm') form: NgForm;
 
@@ -33,15 +34,22 @@ export class BookEditComponent {
             .filter(params => params['bookId'] === 'add')
             .combineLatest(this.route.queryParams)
             .switchMap(([params, queryParams]) => {
-                return queryParams['w']
-                    ? this.wishService.get(queryParams['w'])
-                    : Observable.of(new Book());
+                if (queryParams['w']) {
+                    this.wishId = queryParams['w'];
+                    return this.wishService.get(this.wishId);
+                }
+                return Observable.of(new Book());
             }).subscribe(book => this.currentBook = book);
     }
 
     formHandler(bookAction$: Observable<Book | any>, addNew: boolean): void {
         this.form.form.disable();
-        bookAction$.subscribe(response => {
+        bookAction$.subscribe(() => {
+
+            if (this.wishId) {
+                this.wishService.remove(this.wishId).subscribe();
+            }
+
             if (addNew) {
                 this.currentBook = new Book();
                 this.router.navigate(['/books', 'add']);
