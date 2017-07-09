@@ -1,10 +1,10 @@
-import {UserBookListComponent} from './components/user-book-list.component';
-import {HomeComponent} from './components/home.component';
-import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
-import {BookEditComponent} from "./components/book-edit.component";
-import {WishListComponent} from "./components/wish-list.component";
-import {WishEditComponent} from "./components/wish-edit.component";
+import { UserBookListComponent } from './components/user-book-list.component';
+import { HomeComponent } from './components/home.component';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { BookEditComponent } from "./components/book-edit.component";
+import { WishListComponent } from "./components/wish-list.component";
+import { WishEditComponent } from "./components/wish-edit.component";
 
 const routes: Routes = [
     {

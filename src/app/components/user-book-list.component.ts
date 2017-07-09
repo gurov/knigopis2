@@ -1,7 +1,7 @@
-import {ActivatedRoute} from '@angular/router';
-import {UserService} from './../services/user.service';
-import {Book, User} from './../models';
-import {Component, OnInit} from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { UserService } from './../services/user.service';
+import { Book, User } from './../models';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'k-user-books',

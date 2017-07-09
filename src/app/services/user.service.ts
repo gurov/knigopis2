@@ -1,7 +1,7 @@
-import {Book, Credentials, List, User} from './../models';
-import {Observable} from 'rxjs/Rx';
-import {Injectable} from '@angular/core';
-import {ApiService} from './api.service';
+import { Book, Credentials, List, User } from './../models';
+import { Observable } from 'rxjs/Rx';
+import { Injectable } from '@angular/core';
+import { ApiService } from './api.service';
 
 @Injectable()
 export class UserService {

@@ -1,7 +1,7 @@
-import {UserService} from './../services/user.service';
-import {BookService} from './../services/book.service';
-import {Book, List, User} from './../models';
-import {Component} from '@angular/core';
+import { UserService } from './../services/user.service';
+import { BookService } from './../services/book.service';
+import { Book, List, User } from './../models';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'k-home',
