@@ -21,10 +21,10 @@ export class BookEditComponent {
     @ViewChild('editBookForm') form: NgForm;
 
     constructor(private route: ActivatedRoute,
-                private router: Router,
-                private authService: AuthService,
-                private wishService: WishService,
-                private bookService: BookService) {
+        private router: Router,
+        private authService: AuthService,
+        private wishService: WishService,
+        private bookService: BookService) {
         this.route.params
             .filter(params => params['bookId'] !== 'add')
             .switchMap(params => this.bookService.get(params['bookId']))
@@ -55,7 +55,7 @@ export class BookEditComponent {
                 this.router.navigate(['/books', 'add']);
             } else {
                 const user = this.authService.getCurrentUser();
-                this.router.navigate(['/', user.nickname, 'books'], {queryParams: {u: user.id}});
+                this.router.navigate(['/', user.nickname, 'books'], { queryParams: { u: user.id } });
             }
         }, error => this.error = error, () => {
             this.form.form.enable();
