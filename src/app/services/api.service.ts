@@ -35,7 +35,7 @@ export class ApiService {
     }
 
     getRequestOptionsArgs(): RequestOptionsArgs {
-        let headers = new Headers();
+        const headers = new Headers();
         headers.append('Authorization', 'Bearer ' + localStorage.getItem('access-token'));
         return { headers };
     }

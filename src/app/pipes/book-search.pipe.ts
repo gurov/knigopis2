@@ -15,7 +15,7 @@ export class BookSearchPipe implements PipeTransform {
                     b.title,
                     b.notes
                 ].join(' ').toUpperCase();
-                return !search || ~s.indexOf(search.toUpperCase());
+                return !search || s.includes(search.toUpperCase());
             });
     }
 }

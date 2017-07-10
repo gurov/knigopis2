@@ -14,6 +14,7 @@ export class UserBookListComponent implements OnInit {
     public user: User = new User();
     public bookGroups = [];
     public error: string = '';
+    public search: string;
 
     constructor(private userService: UserService, private route: ActivatedRoute) {
 
