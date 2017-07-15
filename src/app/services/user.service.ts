@@ -31,4 +31,7 @@ export class UserService {
         return this.api.get(this.path + '/current');
     }
 
+    saveUser(user: User): Observable<User> {
+        return this.api.put(this.path + '/' + user.id, user);
+    }
 }

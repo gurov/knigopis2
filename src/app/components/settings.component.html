@@ -1,0 +1,27 @@
+<h2>Настройки</h2>
+
+<form #settingsForm="ngForm" class="mt-4">
+    <div class="form-group">
+        <label>Псевдоним</label>
+        <input name="nickname"
+            [(ngModel)]="user.nickname"
+            type="text"
+            class="form-control"
+            placeholder="Укажите псевдоним">
+    </div>
+
+    <div class="form-group">
+        <label>Ссылка на личную страницу</label>
+        <input type="text"
+            name="author"
+            [(ngModel)]="user.profile"
+            class="form-control"
+            placeholder="Укажите ссылку на web-страницу">
+    </div>
+
+    <div>
+        <button class="btn btn-primary" (click)="saveAndClose()">Сохранить и закрыть
+        </button>
+    </div>
+
+</form>

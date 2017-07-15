@@ -41,6 +41,10 @@ export class AuthService {
         return this.currentUser;
     }
 
+    setCurrentUser(user: User): void {
+        this.currentUser = user;
+    }
+
     clear() {
         localStorage.setItem('access-token', '');
         this.currentUser = null;
