@@ -2,10 +2,19 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { BookComponent } from "./book.component";
 import { RouterTestingModule } from "@angular/router/testing";
 import { AuthService } from "../services/auth.service";
-import { UserService } from "../services/user.service";
 import { ApiService } from "../services/api.service";
-import { Http, ConnectionBackend, RequestOptions } from "@angular/http";
+import { User } from "../models";
 
+class MockAuthService extends AuthService {
+
+    constructor() {
+        super(null);
+    }
+
+    public getCurrentUser(): User {
+        return new User();
+    }
+}
 
 describe('BookComponent', () => {
     let component: BookComponent;
@@ -15,7 +24,7 @@ describe('BookComponent', () => {
         TestBed.configureTestingModule({
             imports: [RouterTestingModule],
             declarations: [BookComponent],
-            providers: [AuthService, UserService, ApiService, Http, ConnectionBackend, RequestOptions]
+            providers: [{ provide: AuthService, useClass: MockAuthService }]
         })
             .compileComponents();
     }));
