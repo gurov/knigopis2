@@ -2,7 +2,15 @@
     <h5>
         {{book.title}}
         <span class="hidden-md-down book-title-btns ml-2">
-            <a [routerLink]="['/books', book.id]" class="small">[редактировать]</a>
+            <a *ngIf="isMyBook" [routerLink]="['/books', book.id]" class="small">[редактировать]</a>
+            <a *ngIf="!isMyBook"
+               [queryParams]="{ob: book.id}"
+               [routerLink]="['/books/add']"
+               class="small">[прочитал]</a>
+            <a *ngIf="!isMyBook"
+               [queryParams]="{ob: book.id}"
+               [routerLink]="['/wish/edit/add']"
+               class="small">[прочитать позже]</a>
         </span>
     </h5>
     <h6>{{book.author}}</h6>
@@ -10,6 +18,14 @@
         [{{book.createdAt ? book.createdAt.split(' ')[0] : ''}}] <span>{{book.notes}}</span>
     </p>
     <div class="hidden-lg-up">
-        <a [routerLink]="['/books', book.id]" class="btn btn-sm btn-secondary">Редактировать</a>
+        <a *ngIf="isMyBook" [routerLink]="['/books', book.id]" class="btn btn-sm btn-secondary">Редактировать</a>
+        <a *ngIf="!isMyBook"
+           [queryParams]="{ob: book.id}"
+           [routerLink]="['/books/add']"
+           class="btn btn-sm btn-secondary">Прочитал</a>
+        <a *ngIf="!isMyBook"
+           [queryParams]="{ob: book.id}"
+           [routerLink]="['/wish/edit/add']"
+           class="btn btn-sm btn-secondary">Прочитать позже</a>
     </div>
 </div>

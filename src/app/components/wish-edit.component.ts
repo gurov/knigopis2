@@ -5,6 +5,7 @@ import { Observable } from "rxjs/Observable";
 import { AuthService } from "../services/auth.service";
 import { NgForm } from "@angular/forms";
 import { WishService } from "../services/wish.service";
+import { BookService } from "../services/book.service";
 
 @Component({
     selector: 'k-wish-edit',
@@ -20,6 +21,7 @@ export class WishEditComponent {
 
     constructor(private route: ActivatedRoute,
         private router: Router,
+        private bookService: BookService,
         private authService: AuthService,
         private wishService: WishService) {
         this.route.params
@@ -29,7 +31,25 @@ export class WishEditComponent {
 
         this.route.params
             .filter(params => params['bookId'] === 'add')
-            .subscribe(book => this.currentBook = new Book());
+            .combineLatest(this.route.queryParams)
+            .switchMap(([params, queryParams]) => {
+                if (queryParams['ob']) {
+                    return this.bookService.get(queryParams['ob'])
+                        .map(book => {
+                            const newBook = new Book();
+                            newBook.author = book.author;
+                            newBook.priority = 50;
+                            newBook.title = book.title;
+                            newBook.notes = `Увидел у ${book.user.nickname}`;
+                            if (book.notes) {
+                                newBook.notes += ` с примечанием: ${book.notes}`;
+                            }
+                            return newBook;
+                        });
+                }
+                return Observable.of(new Book());
+            })
+            .subscribe(book => this.currentBook = book);
     }
 
     formHandler(bookAction$: Observable<Book | any>, addNew: boolean): void {

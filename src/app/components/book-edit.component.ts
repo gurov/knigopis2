@@ -38,8 +38,22 @@ export class BookEditComponent {
                     this.wishId = queryParams['w'];
                     return this.wishService.get(this.wishId);
                 }
+                if (queryParams['ob']) {
+                    return this.bookService.get(queryParams['ob'])
+                        .map(book => {
+                            const newBook = new Book();
+                            newBook.author = book.author;
+                            newBook.title = book.title;
+                            newBook.notes = `Увидел у ${book.user.nickname}`;
+                            if (book.notes) {
+                                newBook.notes += ` с примечанием: ${book.notes}`;
+                            }
+                            return newBook;
+                        });
+                }
                 return Observable.of(new Book());
-            }).subscribe(book => this.currentBook = book);
+            })
+            .subscribe(book => this.currentBook = book);
     }
 
     formHandler(bookAction$: Observable<Book | any>, addNew: boolean): void {

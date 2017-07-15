@@ -9,8 +9,7 @@ import { WishEditComponent } from "./components/wish-edit.component";
 const routes: Routes = [
     {
         path: '',
-        component: HomeComponent,
-        children: []
+        component: HomeComponent
     },
     {
         path: ':name/books',

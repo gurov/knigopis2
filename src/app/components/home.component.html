@@ -9,7 +9,7 @@
 <h5 class="mt-2">Недавние пользователи</h5>
 <ul class="list-inline">
     <li *ngFor="let user of latestUsers" class="list-inline-item">
-        <a [routerLink]="[user.nickname, 'books']"
+        <a routerLink="{{user.nickname}}/books"
            [queryParams]="{u: user.id}">{{user.nickname}}</a>
         <sup>{{user.booksCount}}</sup>
     </li>
