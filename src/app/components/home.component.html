@@ -6,7 +6,7 @@
         <a class="btn btn-primary btn-lg" href="#" role="button">Добавить запись о книге »</a>
     </p>
 </div>
-<h5 class="mt-2">Подписки</h5>
+<h3 class="mt-2">Недавние пользователи</h3>
 <ul class="list-inline">
     <li *ngFor="let user of latestUsers" class="list-inline-item">
         <a routerLink="{{user.nickname}}/books"
@@ -14,10 +14,12 @@
         <sup>{{user.booksCount}}</sup>
     </li>
 </ul>
-<h5 class="mt-2">Недавние пользователи</h5>
-<ul>
-    <li *ngFor="let book of latestNoteBooks">
-        {{book.title}} ~
-        <a [routerLink]="[book.user.nickname, 'books']" [queryParams]="{u: book.user.id}">{{book.user.nickname}}</a>
-    </li>
-</ul>
+<h3 class="mt-2">Некоторые недавние книги с примечаниями</h3>
+
+<blockquote class="blockquote" *ngFor="let book of latestNoteBooks">
+    <p class="mb-0">{{book.notes}}</p>
+    <footer class="blockquote-footer">{{book.title}}
+        ~ <a [routerLink]="[book.user.nickname, 'books']" [queryParams]="{u: book.user.id}">{{book.user.nickname}}</a>
+    </footer>
+</blockquote>
+

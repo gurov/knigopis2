@@ -11,6 +11,7 @@ export class AppComponent {
 
     public isAuthorized: boolean = false;
     public currentUser: User;
+    public year: number = (new Date()).getFullYear();
 
     constructor(private authService: AuthService, private ref: ChangeDetectorRef) {
         this.authService.setAuthHook();

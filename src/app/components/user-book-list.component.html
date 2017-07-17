@@ -1,4 +1,4 @@
-<div class="row" *ngIf="user.nickname">
+<div class="row mb-4" *ngIf="user.nickname">
     <div class="col-md-9">
         <h3>
             Список прочитанных книг пользователя
@@ -10,7 +10,6 @@
     </div>
 </div>
 
-<hr>
 <div [hidden]="userBooks || error">
     <span class="loader"></span> Загрузка ...
 </div>
