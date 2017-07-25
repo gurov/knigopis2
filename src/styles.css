@@ -36,7 +36,7 @@
 
 body {
     min-height: 75rem;
-    padding-top: 4.5rem;
+    padding-top: 5.5rem;
 }
 .footer {
     padding-top: 1.5rem;
@@ -57,4 +57,34 @@ body {
         position: absolute;
         float: left;
     }
+}
+
+.user-photo {
+    height: 20px;
+    width: 20px;
+}
+.knigopis-logo {
+    display: block;
+    width: 123px;
+    height: 30px;
+    background-image: url(assets/knigopis-black-logo.png);
+}
+
+.color-mix {
+    color: #B2B1B1;
+    color: #B29575;
+    color: #796149;
+    color: #2A1617;
+}
+
+.navbar-nav .nav-link {
+    font-size: 0.95rem;
+}
+
+nav.navbar {
+    box-shadow: 0 0px 15px rgba(0,0,0,0.6);
+}
+
+.bg-faded, .jumbotron {
+    /* background-color: #eecc99; */
 }

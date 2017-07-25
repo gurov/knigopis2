@@ -1,4 +1,4 @@
-<div class="mb-2 pt-2 book-box">
+<div class="mb-3 pt-2 book-box">
     <h5>
         {{book.title}}
         <span class="hidden-md-down book-title-btns ml-2">
@@ -14,9 +14,9 @@
         </span>
     </h5>
     <h6>{{book.author}}</h6>
-    <p class="text-muted">
+    <div class="text-muted mb-1">
         [{{book.createdAt ? book.createdAt.split(' ')[0] : ''}}] <span>{{book.notes}}</span>
-    </p>
+    </div>
     <div class="hidden-lg-up">
         <a *ngIf="isMyBook" [routerLink]="['/books', book.id]" class="btn btn-sm btn-secondary">Редактировать</a>
         <a *ngIf="!isMyBook"

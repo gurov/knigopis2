@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light bg-faded navbar-toggleable fixed-top">
     <div class="container d-flex ml-xs-0 mr-xs-0">
-        <a class="navbar-brand" [routerLink]="['/']">Книгопись</a>
+        <a class="navbar-brand knigopis-logo" [routerLink]="['/']"></a>
 
         <ul class="navbar-nav" *ngIf="isAuthorized">
             <li class="nav-item hidden-xs-down">
@@ -18,7 +18,12 @@
         </ul>
         <ul class="navbar-nav ml-auto" *ngIf="isAuthorized">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href data-toggle="dropdown">{{currentUser?.nickname}}</a>
+                <a class="nav-link dropdown-toggle d-flex align-items-center"
+                    href
+                    data-toggle="dropdown">
+                    <img [src]="currentUser.photo" alt="User avatar" class="user-photo mr-1">
+                    {{currentUser?.nickname}}<sup *ngIf="currentUser.booksCount">{{currentUser.booksCount}}</sup>
+                </a>
                 <div class="dropdown-menu dropdown-menu-right">
                     <a class="dropdown-item hidden-sm-up" routerLinkActive="active" [routerLink]="[currentUser.nickname, 'books']" [queryParams]="{u: currentUser.id}">Мой список книг</a>
                     <a class="dropdown-item hidden-sm-up" routerLinkActive="active" [routerLink]="['/books', 'add']">Добавить книгу</a>
