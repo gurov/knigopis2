@@ -1,54 +1,55 @@
+<nav class="navbar navbar-light bg-faded navbar-toggleable fixed-top">
+    <div class="container d-flex ml-xs-0 mr-xs-0">
+        <a class="navbar-brand" [routerLink]="['/']">Книгопись</a>
 
-<div class="container">
-    <div class="header clearfix">
-        <nav class="d-flex align-items-center">
-            <h3 class="text-muted mr-auto">
-                <a [routerLink]="['/']">Книгопись</a>
-            </h3>
-            <ul class="nav nav-pills float-right" *ngIf="isAuthorized">
-                <li class="nav-item hidden-xs-down">
-                    <a class="nav-link"
-                        routerLinkActive="active"
-                        [routerLink]="[currentUser.nickname, 'books']"
-                        [queryParams]="{u: currentUser.id}">Мой список<span class="hidden-sm-down"> книг</span></a>
-                </li>
-                <li class="nav-item hidden-xs-down">
-                    <a class="nav-link"
-                        routerLinkActive="active"
-                        [routerLink]="['/books', 'add']">Добавить<span class="hidden-sm-down"> книгу</span></a>
-                </li>
-                <li class="nav-item hidden-sm-down">
-                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/wish', 'list']">Список к прочтению</a>
-                </li>
-                <li class="nav-item hidden-md-down">
-                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/wish', 'edit', 'add']">Добавить к прочтению</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href data-toggle="dropdown">{{currentUser?.nickname}}</a>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item hidden-sm-up" routerLinkActive="active" [routerLink]="[currentUser.nickname, 'books']" [queryParams]="{u: currentUser.id}">Мой список книг</a>
-                        <a class="dropdown-item hidden-sm-up" routerLinkActive="active" [routerLink]="['/books', 'add']">Добавить книгу</a>
-                        <a class="dropdown-item hidden-md-up" routerLinkActive="active" [routerLink]="['/wish', 'list']">Список к прочтению</a>
-                        <a class="dropdown-item hidden-lg-up" routerLinkActive="active" [routerLink]="['/wish', 'edit', 'add']">Добавить к прочтению</a>
+        <ul class="navbar-nav" *ngIf="isAuthorized">
+            <li class="nav-item hidden-xs-down">
+                <a class="nav-link" routerLinkActive="active" [routerLink]="[currentUser.nickname, 'books']" [queryParams]="{u: currentUser.id}">Мой список<span class="hidden-sm-down"> книг</span></a>
+            </li>
+            <li class="nav-item hidden-xs-down">
+                <a class="nav-link" routerLinkActive="active" [routerLink]="['/books', 'add']">Добавить<span class="hidden-sm-down"> книгу</span></a>
+            </li>
+            <li class="nav-item hidden-sm-down">
+                <a class="nav-link" routerLinkActive="active" [routerLink]="['/wish', 'list']">Список к прочтению</a>
+            </li>
+            <li class="nav-item hidden-md-down">
+                <a class="nav-link" routerLinkActive="active" [routerLink]="['/wish', 'edit', 'add']">Добавить к прочтению</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto" *ngIf="isAuthorized">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href data-toggle="dropdown">{{currentUser?.nickname}}</a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item hidden-sm-up" routerLinkActive="active" [routerLink]="[currentUser.nickname, 'books']" [queryParams]="{u: currentUser.id}">Мой список книг</a>
+                    <a class="dropdown-item hidden-sm-up" routerLinkActive="active" [routerLink]="['/books', 'add']">Добавить книгу</a>
+                    <a class="dropdown-item hidden-md-up" routerLinkActive="active" [routerLink]="['/wish', 'list']">Список к прочтению</a>
+                    <a class="dropdown-item hidden-lg-up" routerLinkActive="active" [routerLink]="['/wish', 'edit', 'add']">Добавить к прочтению</a>
 
-                        <div class="dropdown-divider hidden-lg-up"></div>
-                        <a class="dropdown-item"
-                            *ngIf="currentUser.booksCount"
-                            href="http://api.knigopis.com/users/export-books">Экспорт</a>
-                        <a class="dropdown-item" [routerLink]="['settings']">Настройки</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" (click)="exit()">Выход</a>
-                    </div>
-                </li>
-            </ul>
-            <div class="float-right" [hidden]="isAuthorized">
-                <span class="text-white">Войти через</span>
-                <div id="uLogin" data-ulogin="display=small;theme=classic;fields=first_name,last_name;providers=vkontakte,odnoklassniki,mailru,facebook;hidden=other;redirect_uri=;mobilebuttons=0;callback=initAuth"></div>
-            </div>
-        </nav>
+                    <div class="dropdown-divider hidden-lg-up"></div>
+                    <a class="dropdown-item" *ngIf="currentUser.booksCount" href="http://api.knigopis.com/users/export-books">Экспорт</a>
+                    <a class="dropdown-item" [routerLink]="['settings']">Настройки</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" (click)="exit()">Выход</a>
+                </div>
+            </li>
+        </ul>
+
+        <div class="float-right" [hidden]="isAuthorized">
+            <span>Войти через</span>
+            <div id="uLogin" data-ulogin="display=small;theme=classic;fields=first_name,last_name;providers=vkontakte,odnoklassniki,mailru,facebook;hidden=other;redirect_uri=;mobilebuttons=0;callback=initAuth"></div>
+        </div>
+
 
     </div>
-    <hr class="mt-0">
+
+
+
+</nav>
+
+
+
+<div class="container">
+
     <div>
         <router-outlet></router-outlet>
     </div>
