@@ -1,10 +1,48 @@
-<div class="jumbotron mt-4">
+<div class="jumbotron text-center mt-4">
     <h1 class="display-4">Привет, читатель!</h1>
     <p class="lead">Этот сервис создан для того, чтобы вы могли сохранить и в любое время получить список прочитанных
         вами книг.</p>
     <p class="lead">
-        <a class="btn btn-primary btn-lg" href="#" role="button">Добавить запись о книге »</a>
+        <a class="btn btn-primary btn-lg"
+            [routerLink]="['/books/add']"
+            role="button">Добавить <br class="hidden-sm-up">запись о книге »</a>
     </p>
+</div>
+<p class="text-center">
+    Конечно, такой сервис не единственный. Но изученные нами конкуренты имеет некоторые недостатки и по некоторым не удовлетворяли
+    авторов проекта.<br>Речь не только о фатальном недостатке. Итак, наши преимущества:
+</p>
+<div class="row features text-center">
+    <div class="col-md-3">
+        <h5>Свобода ввода</h5>
+        <p>
+            Нет привязки к конкретным книгам. Пишите в заголовок и в автора то, что вы сами хотите. Указывайте дату прочтения, какую
+            вам удобно. Можете указать полную дату, можете указать только год, либо добавить месяц, если помните. Можете
+            вообще не указывать дату прочтения.
+        </p>
+    </div>
+    <div class="col-md-3">
+        <h5>Ваши примечания</h5>
+        <p>
+            Вместо оценок мы предлагаем добавить ваши примечания к книге, где вы можете указать насколько вам понравилась книга, что
+            в ней интересного или кому бы вы её порекомендовали в удобном вам формате.
+        </p>
+    </div>
+    <div class="col-md-3">
+        <h5>Легкость просмотра</h5>
+        <p>
+            Мы постарались сделать список прочитанного наиболее легким, но в то же время информативным. Данные общедоступны для чтения.
+            В любое время вы можете поделиться вашим списком.
+        </p>
+    </div>
+    <div class="col-md-3">
+        <h5>Долговечность</h5>
+        <p>Все ваши записи попадают в <a href="https://github.com/knigopis/repo.knigopis.com" target="_blank">git-репозиторий</a>,
+            который синхронизируется с отказоустойчивым облачным сервисом - GitHub, где вы всегда сможете получить к ним
+            доступ. А если GitHub откажется от хранения таких данных, мы найдём ему замену.</p>
+        <p>
+        </p>
+    </div>
 </div>
 <h3 class="mt-2">Недавние пользователи</h3>
 <ul class="list-inline">
@@ -18,8 +56,10 @@
 
 <blockquote class="blockquote" *ngFor="let book of latestNoteBooks">
     <p class="mb-0">{{book.notes}}</p>
-    <footer class="blockquote-footer">{{book.title}}
-        ~ <a [routerLink]="[book.user.nickname, 'books']" [queryParams]="{u: book.user.id}">{{book.user.nickname}}</a>
+    <div class="text-muted small">{{book.title}}</div>
+    <div class="text-muted small">{{book.author}}</div>
+    <footer class="blockquote-footer">
+        <a [routerLink]="[book.user.nickname, 'books']" [queryParams]="{u: book.user.id}">{{book.user.nickname}}</a>
     </footer>
 </blockquote>
 

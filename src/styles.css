@@ -88,3 +88,6 @@ nav.navbar {
 .bg-faded, .jumbotron {
     /* background-color: #eecc99; */
 }
+.features p {
+    word-wrap: break-word;
+}
