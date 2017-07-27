@@ -129,3 +129,6 @@ nav.navbar {
     background-color: #c58f87;
     border-color: #c58f87;
 }
+.dropdown-item.active, .dropdown-item:active {
+    background-color: #b85f51;
+}
