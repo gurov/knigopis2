@@ -75,6 +75,21 @@ body {
     color: #B29575;
     color: #796149;
     color: #2A1617;
+
+
+}
+
+body {
+    color: #3d3938;
+    background-image: url(assets/fon.png);
+}
+
+a {
+    color: #1f5092;
+}
+
+a:hover {
+    color: #0e51dc;
 }
 
 .navbar-nav .nav-link {
@@ -85,9 +100,19 @@ nav.navbar {
     box-shadow: 0 0px 15px rgba(0,0,0,0.6);
 }
 
-.bg-faded, .jumbotron {
-    /* background-color: #eecc99; */
+.bg-faded {
+     background-color: #f5f8fd;
+}
+
+.jumbotron {
+    background-color: #eff4fa;
 }
 .features p {
     word-wrap: break-word;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #b85f51;
+    border-color: #b85f51;
 }
