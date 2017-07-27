@@ -11,6 +11,11 @@ export class User {
     subscriptions?: List<number>;
 }
 
+export class SubUser {
+    lastBooksCount: number;
+    subUser: User;
+}
+
 export class Book {
     id?: string;
     title?: string;

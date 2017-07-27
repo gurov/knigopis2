@@ -111,8 +111,21 @@ nav.navbar {
     word-wrap: break-word;
 }
 
+.btn {
+    cursor: pointer;
+}
+
 .btn-primary {
     color: #fff;
     background-color: #b85f51;
     border-color: #b85f51;
+}
+.btn-primary:hover {
+    background-color: #9e2d1b;
+    border-color: #9e2d1b;
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+    background-color: #c58f87;
+    border-color: #c58f87;
 }

@@ -44,6 +44,23 @@
         </p>
     </div>
 </div>
+<div *ngIf="subscriptions.length">
+    <h3 class="mt-2">
+        Подписки
+    </h3>
+    <ul class="list-inline">
+        <li *ngFor="let sub of subscriptions" class="list-inline-item">
+            <a routerLink="{{sub.subUser.nickname}}/books" [queryParams]="{u: sub.subUser.id}">{{sub.subUser.nickname}}</a>
+            <sup>
+                {{sub.subUser.booksCount}}
+                <span class="text-success" *ngIf="sub.subUser.booksCount - sub.lastBooksCount">
+                    ({{sub.subUser.booksCount - sub.lastBooksCount > 0 ? '+' : ''}}{{sub.subUser.booksCount - sub.lastBooksCount}})
+                </span>
+            </sup>
+        </li>
+    </ul>
+</div>
+
 <h3 class="mt-2">Недавние пользователи</h3>
 <ul class="list-inline">
     <li *ngFor="let user of latestUsers" class="list-inline-item">

@@ -20,6 +20,7 @@ import { WishListComponent } from "./components/wish-list.component";
 import { WishComponent } from "./components/wish.component";
 import { WishEditComponent } from "./components/wish-edit.component";
 import { SettingsComponent } from "./components/settings.component";
+import { SubscriptionService } from "./services/subscriptions.service";
 
 @NgModule({
     declarations: [
@@ -46,7 +47,8 @@ import { SettingsComponent } from "./components/settings.component";
         UserService,
         ApiService,
         AuthService,
-        WishService
+        WishService,
+        SubscriptionService
     ],
     bootstrap: [AppComponent]
 })
