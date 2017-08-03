@@ -1,6 +1,9 @@
-# Knigopis2 
+# Knigopis2
 
-Angular 2 клиент для [api.knigopis.com](https://github.com/knigopis/api.knigopis.com). Tests: [![CircleCI](https://circleci.com/gh/gurov/knigopis2/tree/master.svg?style=svg&circle-token=17f0b5b5162c47741913d49d9fafcaa6232ca61a)](https://circleci.com/gh/gurov/knigopis2/tree/master)
+
+[![CircleCI](https://circleci.com/gh/gurov/knigopis2/tree/master.svg?style=shield&circle-token=17f0b5b5162c47741913d49d9fafcaa6232ca61a)](https://circleci.com/gh/gurov/knigopis2/tree/master)
+
+Angular 2 клиент для [api.knigopis.com](https://github.com/knigopis/api.knigopis.com).
 
 Есть такой сайт [www.knigopis.com](http://www.knigopis.com/) — дневник читателя и сервис учёта прочитанных книг. Его создатель - мой друг [Роман](http://github.com/rnixik). Клиентская часть сайта Книгописи написана на первом Ангуляре, а в данном проекте я пытаюсь написать клиентскую часть на Ангуляре 2 и параллельно изучаю его. Для работы с книгами использую прокси и [api.knigopis.com](https://github.com/knigopis/api.knigopis.com).
 
@@ -13,6 +16,7 @@ Angular 2 клиент для [api.knigopis.com](https://github.com/knigopis/api
 5) Запустить проект `npm run start`
 
 ## Разработка шаг за шагом
+Ссылки на видео разработки доступны по клику для каждой части.
 
 ### Часть 1
 

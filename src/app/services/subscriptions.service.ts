@@ -19,6 +19,11 @@ export class SubscriptionService {
         return this.api.post(`${this.path}/${userId}`, {});
     }
 
+    update(userId: string): Observable<any> {
+        return this.api.put(`${this.path}/${userId}`, {});
+    }
+
+
     delete(userId: string): Observable<any> {
         return this.api.delete(`${this.path}/${userId}`);
     }

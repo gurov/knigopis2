@@ -21,6 +21,7 @@ import { WishComponent } from "./components/wish.component";
 import { WishEditComponent } from "./components/wish-edit.component";
 import { SettingsComponent } from "./components/settings.component";
 import { SubscriptionService } from "./services/subscriptions.service";
+import { StarComponent } from "./components/star.component";
 
 @NgModule({
     declarations: [
@@ -34,7 +35,8 @@ import { SubscriptionService } from "./services/subscriptions.service";
         WishEditComponent,
         YearSortPipe,
         BookSearchPipe,
-        SettingsComponent
+        SettingsComponent,
+        StarComponent,
     ],
     imports: [
         BrowserModule,

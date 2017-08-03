@@ -1,0 +1,12 @@
+
+<span *ngIf="!itsMe">
+    <span class="loader ml-2" *ngIf="loading"></span>
+    <span *ngIf="!loading && isMySub"
+        class="star"
+        title="Unsubscribe"
+        (click)="unsubscribe()">★</span>
+    <span *ngIf="!loading && !isMySub"
+        class="star"
+         title="Subscribe"
+        (click)="subscribe()">☆</span>
+</span>
