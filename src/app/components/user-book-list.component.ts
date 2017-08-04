@@ -1,13 +1,13 @@
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from './../services/user.service';
 import { Book, User } from './../models';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 @Component({
     selector: 'k-user-books',
     templateUrl: './user-book-list.component.html'
 })
-export class UserBookListComponent implements OnInit {
+export class UserBookListComponent implements OnInit, AfterViewInit {
 
     public userBooks: Book[];
     public userId: string;
@@ -33,6 +33,22 @@ export class UserBookListComponent implements OnInit {
             })
             .subscribe(this.bookLoadSucces, this.bookLoadFail);
 
+    }
+
+    ngAfterViewInit() {
+        this.route.queryParams
+            .subscribe(params => {
+                if (params['y']) {
+                    const el = document.getElementById('y-' + params['y']);
+                    if (el) {
+                        const offsets = el.getBoundingClientRect();
+                        const top = offsets.top;
+                        window.scrollTo(0, top - 70);
+                    }
+                } else {
+                    window.scrollTo(0, 0);
+                }
+            });
     }
 
     bookLoadSucces = (list: Book[]) => {
