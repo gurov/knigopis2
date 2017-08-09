@@ -3,33 +3,43 @@ import { Headers, Http, RequestOptionsArgs, Response } from '@angular/http';
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import { environment } from "../../environments/environment";
+
+
 
 @Injectable()
 export class ApiService {
 
+    private API = '';
+
     constructor(private http: Http) {
+
+        if (environment.production) {
+            this.API = 'http://api.knigopis.com';
+        }
+
     }
 
     get(path: string): Observable<any> {
-        return this.http.get(path, this.getRequestOptionsArgs())
+        return this.http.get(this.API + path, this.getRequestOptionsArgs())
             .map(data => data.text() ? data.json() : data)
             .catch(this.handleError);
     }
 
     delete(path: string): Observable<any> {
-        return this.http.delete(path, this.getRequestOptionsArgs())
+        return this.http.delete(this.API + path, this.getRequestOptionsArgs())
             .map(data => data.text() ? data.json() : data)
             .catch(this.handleError);
     }
 
     post(path: string, body: any): Observable<any> {
-        return this.http.post(path, body, this.getRequestOptionsArgs())
+        return this.http.post(this.API + path, body, this.getRequestOptionsArgs())
             .map(data => data.text() ? data.json() : data)
             .catch(this.handleError);
     }
 
     put(path: string, body: any): Observable<any> {
-        return this.http.put(path, body, this.getRequestOptionsArgs())
+        return this.http.put(this.API + path, body, this.getRequestOptionsArgs())
             .map(data => data.text() ? data.json() : data)
             .catch(this.handleError);
     }

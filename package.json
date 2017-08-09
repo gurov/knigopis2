@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --proxy-config proxy.conf.json",
-    "build": "ng build -prod",
+    "build": "ng build -prod --env=prod",
     "test": "ng test --single-run",
     "lint": "ng lint --type-check",
     "format": "tsfmt -r",
