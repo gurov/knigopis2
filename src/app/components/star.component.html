@@ -1,5 +1,5 @@
 
-<span *ngIf="!itsMe">
+<span *ngIf="isAuth && !itsMe">
     <span class="loader ml-2" *ngIf="loading"></span>
     <span *ngIf="!loading && isMySub"
         class="star"

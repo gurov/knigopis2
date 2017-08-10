@@ -25,7 +25,6 @@ export class UserBookListComponent implements OnInit, AfterViewInit {
         this.route.queryParams
             .switchMap(params => {
                 this.userId = params['u'];
-
                 this.userService.getUserInfo(this.userId)
                     .subscribe((user: User) => this.user = user);
 

@@ -14,7 +14,7 @@ export class BookComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.isMyBook = this.authService.getCurrentUser().id === this.book.userId;
+        this.isMyBook = this.authService.getCurrentUser() && this.authService.getCurrentUser().id === this.book.userId;
     }
 
 }
