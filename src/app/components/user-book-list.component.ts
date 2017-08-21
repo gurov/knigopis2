@@ -1,7 +1,7 @@
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from './../services/user.service';
 import { Book, User } from './../models';
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'k-user-books',
@@ -9,7 +9,7 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 })
 export class UserBookListComponent implements OnInit, AfterViewInit {
 
-    public userBooks: Book[];
+    public userBooks: Book[] = [];
     public userId: string;
     public user: User = new User();
     public bookGroups = [];

@@ -6,12 +6,17 @@ import { User } from "../models";
 @Injectable()
 export class AuthService {
 
-    private authHook: Subject<string> = new Subject();
     private currentUser: User;
     public isAuthorized: Subject<boolean> = new Subject();
 
     constructor(private userService: UserService) {
-        window['authHook'] = this.authHook;
+        window['authHook'] = (authToken) => {
+            this.userService.getCredentials(authToken)
+                .subscribe(credentials => {
+                    localStorage.setItem('access-token', credentials['access-token']);
+                    location.reload();
+                });
+        };
 
         const accessToken = localStorage.getItem('access-token');
 
@@ -27,16 +32,6 @@ export class AuthService {
         }
     }
 
-    setAuthHook() {
-        this.authHook
-            .switchMap(authToken => this.userService.getCredentials(authToken))
-            .subscribe(credentials => {
-                localStorage.setItem('access-token', credentials['access-token']);
-                this.currentUser = credentials.user;
-                this.isAuthorized.next(true);
-            });
-    }
-
     getCurrentUser(): User {
         return this.currentUser;
     }
@@ -49,6 +44,7 @@ export class AuthService {
         localStorage.setItem('access-token', '');
         this.currentUser = null;
         this.isAuthorized.next(false);
+        location.reload();
     }
 
 }

@@ -17,7 +17,7 @@
 <script src="//ulogin.ru/js/ulogin.js"></script>
 <script>
     function initAuth(authToken) {
-        window.authHook.next(authToken);
+        window['authHook'](authToken);
     }
 
 </script>
