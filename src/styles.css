@@ -136,3 +136,8 @@ nav.navbar {
     color: #9e2d1b;
     cursor: pointer;
 }
+
+.ulogin-buttons-container {
+    vertical-align: middle !important;
+    height: 20px !important;
+}
