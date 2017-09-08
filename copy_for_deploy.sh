@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo 'clone repo'
-git clone git@github.com:knigopis/www.knigopis.com_v2.git /tmp/knigopis2
+git clone git@github.com:knigopis/www.knigopis.com_v2.git -b gh-pages /tmp/knigopis2
 
 echo 'remove all files'
 cd /tmp/knigopis2
@@ -17,12 +17,12 @@ cp -R dist/* /tmp/knigopis2/
 cd /tmp/knigopis2/
 
 echo "set git user"
-git config --global user.email "info@knigopis.com"
-git config --global user.name "www.knigopis.com"
+git config --global user.email "lucius.gu@ya.com"
+git config --global user.name "Pavel Gurov"
 
 echo "gir add and commit"
 git add --all
 git commit -m "Commit build #$CIRCLE_BUILD_NUM"
 
 echo "push to repo"
-git push origin master
+git push origin gh-pages
