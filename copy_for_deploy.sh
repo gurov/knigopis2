@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo 'clone repo'
-git clone git@github.com:knigopis/www.knigopis.com_v2.git -b gh-pages /tmp/knigopis2
+git clone git@github.com:gurov/knigopis2.git -b gh-pages /tmp/knigopis2
 
 echo 'remove all files'
 cd /tmp/knigopis2
