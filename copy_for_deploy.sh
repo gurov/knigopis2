@@ -22,7 +22,7 @@ git config --global user.name "www.knigopis.com"
 
 echo "gir add and commit"
 git add --all
-git commit -m "Commit build $CIRCLE_BUILD_NUM"
+git commit -m "Commit build #$CIRCLE_BUILD_NUM"
 
 echo "push to repo"
 git push origin master
