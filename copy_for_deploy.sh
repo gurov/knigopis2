@@ -15,6 +15,10 @@ echo "Copy files from build"
 cd -
 cp -R dist/* cd /tmp/knigopis2/
 
+echo "set git user"
+git config --global user.email "info@knigopis.com"
+git config --global user.name "www.knigopis.com"
+
 echo "gir add and commit"
 git add --all
 git commit -m "Commit build $CIRCLE_BUILD_NUM"
