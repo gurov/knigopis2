@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo 'clone repo'
-git clone git@github.com:gurov/knigopis2.git -b gh-pages /tmp/knigopis2
+git clone git@github.com:$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git -b gh-pages /tmp/knigopis2
 
 echo 'remove all files'
 cd /tmp/knigopis2
@@ -18,7 +18,7 @@ cd /tmp/knigopis2/
 
 echo "set git user"
 git config --global user.email "lucius.gu@ya.com"
-git config --global user.name "Pavel Gurov"
+git config --global user.name $CIRCLE_PROJECT_USERNAME
 
 echo "gir add and commit"
 git add --all
