@@ -13,7 +13,8 @@ rm -rf assets
 
 echo "Copy files from build"
 cd -
-cp -R dist/* cd /tmp/knigopis2/
+cp -R dist/* /tmp/knigopis2/
+cd /tmp/knigopis2/
 
 echo "set git user"
 git config --global user.email "info@knigopis.com"
