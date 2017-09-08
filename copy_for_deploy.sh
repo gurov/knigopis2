@@ -17,7 +17,7 @@ cp -R dist/* cd /tmp/knigopis2/
 
 echo "gir add and commit"
 git add --all
-gui commit -m "Commit build $CIRCLE_BUILD_NUM"
+git commit -m "Commit build $CIRCLE_BUILD_NUM"
 
 echo "push to repo"
 git push origin master
