@@ -16,4 +16,4 @@ deployment:
   production:
     branch: master
     commands:
-      - ./copy_for_deploy.sh 
+      - ./copy_for_deploy.sh
