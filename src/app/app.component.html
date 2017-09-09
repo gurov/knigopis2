@@ -39,7 +39,7 @@
             </li>
         </ul>
 
-        <div class="d-md-flex justify-content-start align-items-center" [hidden]="isAuthorized">
+        <div class="d-md-flex justify-content-start align-items-center" *ngIf="!isAuthorized">
             <div class="mr-1">Войти через:</div>
             <div id="uLogin" data-ulogin="display=small;theme=classic;fields=first_name,last_name;providers=vkontakte,odnoklassniki,mailru,facebook;hidden=other;redirect_uri=;mobilebuttons=0;callback=initAuth"></div>
         </div>
