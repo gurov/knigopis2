@@ -11,9 +11,3 @@ dependencies:
 test:
   override:
     - npm run test
-
-deployment:
-  production:
-    branch: master
-    commands:
-      - ./copy_for_deploy.sh

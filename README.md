@@ -8,6 +8,9 @@ Angular 2 клиент для [api.knigopis.com](https://github.com/knigopis/api
 Есть такой сайт [www.knigopis.com](http://www.knigopis.com/) — дневник читателя и сервис учёта прочитанных книг. Его создатель - мой друг [Роман](http://github.com/rnixik). Клиентская часть сайта Книгописи написана на первом Ангуляре, а в данном проекте я пытаюсь написать клиентскую часть на Ангуляре 2 и параллельно изучаю его. Для работы с книгами использую прокси и [api.knigopis.com](https://github.com/knigopis/api.knigopis.com).
 
 ## Как попробовать?
+
+Посмотреть рабочую версию этого репозитория можно тут: [alpha.knigopis.com](http://alpha.knigopis.com).
+
 Чтобы самому попробовать запустить проект локально, нужно сделать следующее:
 1) Установить [Angular cli](https://cli.angular.io/) (будет запускаться локальный сервер с прокси);
 2) Клонировать репозиторий: `git clone https://github.com/gurov/knigopis2`;
