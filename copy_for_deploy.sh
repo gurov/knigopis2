@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo 'clone repo'
-git clone git@github.com:$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git -b gh-pages /tmp/knigopis2
+git clone https://github.com/knigopis/www.knigopis.com_v2.git /tmp/knigopis2
 
 echo 'remove all files'
 cd /tmp/knigopis2
@@ -13,12 +13,12 @@ rm -rf assets
 
 echo "Copy files from build"
 cd -
-cp -R dist/* /tmp/knigopis2/
-cd /tmp/knigopis2/
+cp -R dist/* cd /tmp/knigopis2/
 
 echo "gir add and commit"
 git add --all
-git commit -m "Commit build #$CIRCLE_BUILD_NUM"
+NOW=$(date +"%s")
+git commit -m "Commit build $NOW"
 
 echo "push to repo"
-git push origin gh-pages
+git push origin master
