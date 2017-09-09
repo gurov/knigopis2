@@ -16,10 +16,6 @@ cd -
 cp -R dist/* /tmp/knigopis2/
 cd /tmp/knigopis2/
 
-echo "set git user"
-git config --global user.email "lucius.gu@ya.com"
-git config --global user.name $CIRCLE_PROJECT_USERNAME
-
 echo "gir add and commit"
 git add --all
 git commit -m "Commit build #$CIRCLE_BUILD_NUM"
